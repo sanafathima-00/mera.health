@@ -1,79 +1,68 @@
-# Lab report extraction: starter kit
+# Lab-report extractor: final assessment
 
-Read the brief first. This file only covers what's in the kit and how to run it.
+**Result:** cleanup, validation and all-page PDF input are verified offline. Live accuracy improvement is **unproven**. Nineteen generation attempts produced two valid original predictions and 17 failures; no improved prediction exists. Generation is paused. This is a prototype, not a clinically validated product.
 
-## Contents
+## Setup and reproduction
 
-- `extract.py`: the baseline extractor.
-- `reports/`: 12 sample documents (`.pdf` and `.jpg`).
-- `gold/`: labels for 8 of the 12, named after the report they belong to.
-- `schema.json`: the output shape.
-
-## Run it
-
-Use Python 3.10 or newer and install Poppler, which provides `pdftoppm`:
-
-- macOS: `brew install poppler`
-- Ubuntu/Debian: `sudo apt-get install poppler-utils`
-
-The supplied Gemini setup is one starting point. You can use free credits or adapt the starter to an accessible provider or a local open model; paid access is not required. If you change the model/provider to get started, measure the baseline with that setup before changing its extraction behavior, and document the substitution.
-
-There are no Python package dependencies for the supplied setup. From this folder:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pdftoppm -v
-python -c 'import getpass, os, subprocess, sys; env = os.environ.copy(); env["GEMINI_API_KEY"] = getpass.getpass("Gemini API key: "); sys.exit(subprocess.call([sys.executable, "extract.py", "reports/report_01.pdf"], env=env))'
-```
-
-The last command securely prompts for your key and runs one extraction as a setup smoke test. It makes an API call, which may incur charges depending on your account, and should print JSON containing a `tests` array. It does not save the key or put it in shell history. For repeated calls, set `GEMINI_API_KEY` through your usual local secret/environment setup; do not commit it.
-
-The default model is `gemini-3.8-flash`. Google's [pricing page](https://ai.google.dev/gemini-api/docs/pricing) currently lists free-tier input and output for this model (checked 8 October 2026). You can start with a free-tier project and an API key from [Google AI Studio](https://aistudio.google.com/apikey). Check your project's [active rate limits](https://ai.google.dev/gemini-api/docs/rate-limits): quotas apply per project, and access and limits may change. A key on a paid project can incur charges. If access or quota is insufficient, use another model or provider and document your setup.
-
-The baseline calls the Gemini REST API. You're free to change model (`GEMINI_MODEL`) or provider; record the exact choice with your measurements. Whatever you change, this must keep working and keep printing schema-valid JSON to stdout, because it's how we'll run your version on reports you haven't seen:
-
-```bash
-python extract.py <path-to-report>
-```
-
-If your version needs different setup (other packages, other environment variables), say so at the top of your README.
-
-For setup errors: a missing `pdftoppm` means Poppler is not on `PATH`; HTTP 401/403 means check key/project access, 404 means check model availability, and 429 means check quota. For a connection/TLS error, check network access before retrying. Never disable TLS verification. Keep access troubleshooting within the timebox; document constraints and any alternative you use.
-
-## Checkpoint 1: offline evaluation
-
-No successful accuracy baseline has been measured. Score real saved `report_<id>.json` predictions without credentials:
+Python 3.10+ and Poppler (`pdftoppm` on PATH); no Python packages required. Install Poppler with `brew install poppler` (macOS), `sudo apt-get install poppler-utils` (Debian/Ubuntu), or add extracted Windows Poppler `Library/bin` to PATH. Configure the key privately in ignored `.env`, following `.env.example`; exclude `.env` from any ZIP. The extractor does not automatically load it.
 
 ```powershell
-python evaluate.py score --predictions evidence/baseline
-python -m unittest discover -p 'test_*.py' -v
+pdftoppm -v
+$env:GEMINI_MODEL = 'gemini-3.6-flash'
+# GEMINI_API_KEY must be configured in this process:
+python extract.py <path-to-report>
+# Offline: no credentials or provider calls:
+python evaluate.py score --predictions evidence/baseline_36
+python -B -m unittest discover -p 'test_*.py' -q
 ```
 
-Missing outputs are **unavailable**, not measured failures or zero-score baselines. See [EVALUATION.md](EVALUATION.md) for frozen matching, normalization, failure accounting, metrics and manifest format. Original and adjudicated scores are both reported. [evaluation_cases.json](evaluation_cases.json) documents report 01's platelet correction (`304000` label versus `340000` source); supplied labels stay unchanged.
+When generation is authorized, load `.env` for one CLI invocation without printing the key:
 
-Decision log: kept direct source values and conservative aliases; rejected fuzzy name matching and unit-scale conversion. Verified the platelet discrepancy by PDF text and visual inspection. Preserved the 255-word plan before implementation in commit `df3de423ac889a084b0cd7fd02a04f5d1c95dc29`. The evaluator and synthetic tests do not execute the extractor or make model calls. Unlabelled-report review, provider measurement, and extraction improvements remain future work.
+```powershell
+python -c "import os,subprocess,sys; from pathlib import Path; from experiment import local_key; os.environ['GEMINI_API_KEY']=local_key(Path('.env')); sys.exit(subprocess.call([sys.executable,'extract.py',sys.argv[1]]))" reports/report_01.pdf
+```
 
-## Checkpoint 2: generation requests failed
+The loader handles surrounding quotes/whitespace and overrides stale process credentials. Explicitly select 3.6; source default remains 3.8. Success prints schema-valid JSON; failures exit nonzero. AI Studio displays Free tier; billing-link status and remaining quota are unverified. No billing was enabled.
 
-After the user replaced the invalid key and confirmed free-tier eligibility, model metadata succeeded. All eight unchanged-extractor requests returned HTTP 503; no predictions or token usage were returned. [BASELINE.md](BASELINE.md), [run.json](evidence/baseline/run.json), and raw stdout/stderr record configuration and per-attempt latency (158.320 seconds total, 19.790 mean). [metrics.json](evidence/baseline/metrics.json) records eight failures: operational recall/F1 zero, precision undefined. These failures do not measure extraction accuracy. Original/adjudicated labels and evaluation policy are unchanged. 38 offline tests pass.
+## Architecture and three diagnoses
 
-Decision log: kept the supplied model and requests unchanged; did not retry, silently substitute a model, or fabricate empty predictions. Only free-tier calls were authorized. Successful-report latency, token-based cost and 10000-report/day cost remain unavailable. .env is ignored; .env.example is a placeholder only. Do not assume production volume fits free-tier quota.
+PDF -> every ordered PNG page at 60 DPI -> one Gemini vision request -> strict JSON/row validation -> preserved source values. JPG/PNG bytes are unchanged. Temperature 0, maxOutputTokens 16000, network timeout 180 seconds; rendering timeout 60 seconds with temporary cleanup. No retries, OCR branch or per-page orchestration. Preserve meaningful strings/finite numbers/nulls; reject malformed output and incomplete provider responses. Actual prompts and rationale: [PROMPTS.md](PROMPTS.md).
 
-## Checkpoint 2: selected Gemini 3.6 baseline
+| Example | Original root cause | Fix and evidence |
+|---|---|---|
+| 06: Colour Dark Yellow, Sugar Present (+), Leucocytes 2-3, CRP <0.5 | Float coercion loses meaningful strings | Preserve strings; offline regressions pass; no live prediction |
+| 03: T3, T4, Glycated Hb missing ranges | Prompt explicitly invents standard ranges | Source-only ranges/nulls; live prompt effect unmeasured |
+| 11: 24 labelled rows on page two | Original rendering sends page one only | Both pages reach one mocked request; live recovery unmeasured |
 
-For subsequent comparisons use `GEMINI_MODEL=gemini-3.6-flash` (explicit user decision); the extractor default/source is unchanged. [BASELINE_36.md](BASELINE_36.md) and [baseline_36 metrics](evidence/baseline_36/metrics.json) record all eight reports: report 01 reused with provenance, seven new single attempts, two valid outputs and six failures. Original/adjudicated complete-row micro-F1: 17.72%/18.99%; macro-F1: 13.69%/14.58%. Total attempt time 398.863 seconds; mean 49.858. Token usage exists only for two successes; full-corpus cost is unavailable.
+Validation proves shape, not source truth. Multiple images increase memory/payload; 60 DPI may miss fine print. Higher resolution and constrained generation were not tested live. No clinical corrections or unit conversions are performed.
 
-Decision log: preserved the original model failures and two approved retries; selected 3.6 only after an approved single-report fallback. Kept frozen scoring despite report 08 name-matching limitations: five unmatched identities do not prove hallucination, and other fields agree with labels by manual comparison. Provider failures dominate this baseline; later accuracy attribution must account for them. 38 tests pass; protected files and policies are unchanged. No extraction improvements yet.
+## Frozen evaluation and results
 
-## Checkpoint 3: offline behavior fixes
+[EVALUATION.md](EVALUATION.md): one-to-one exact/frozen-alias matching; duplicates in source order; conservative Decimal normalization; preserve inequalities/intervals; no incompatible unit conversion. Report missing, unmatched, invalid, failed and unavailable separately. Report 01 platelet is document 340000 versus supplied 304000: publish original and explicit adjudicated views without changing gold.
 
-[Actual prompts and rationale](PROMPTS.md). Removed numeric coercion and inferred status/ranges; preserve strings, finite numbers, units and nulls. Strict JSON/row validation and provider completion checks fail visibly instead of returning empty success. PDF conversion stays page 1 at 60 DPI. Use `GEMINI_MODEL=gemini-3.6-flash` for future comparisons; no generation calls were made in this checkpoint.
+| Original Gemini 3.6 baseline | Original labels | Adjudicated |
+|---|---:|---:|
+| Report 01 complete F1; 14/14 matched | 92.86% | 100% |
+| Report 08 complete F1; 1/6 matched | 16.67% | 16.67% |
+| Eight-attempt complete micro P/R/F1 | 70%/10.14%/17.72% | 75%/10.87%/18.99% |
+| Eight-attempt complete macro F1 | 13.69% | 14.58% |
 
-Verification: `python -B -m unittest discover -p 'test_*.py' -q` passes 64 tests (26 extractor, 38 evaluator), including mocked provider/CLI failures and saved baseline fixtures. Protected labels/reports/plan/schema and frozen evaluator remain unchanged. Saved baseline rescoring is identical. These are offline correctness fixes, not a measured extraction-accuracy improvement; live evaluation and all-page support remain pending.
+**Failure-inclusive aggregates are operational results, not extraction accuracy.** Six baseline requests failed (five 503, one timeout). Valid outputs: 15 matched rows; values correct 14/15 original, 15/15 adjudicated; units/ranges correct on those matches. Report 08 loses the LDL Direct qualifier and expands names; five unmatched identities do not prove hallucinations. [BASELINE_36.md](BASELINE_36.md) and saved metrics give all per-report fields, coverage, 123 missing rows and five unmatched predictions. Improved/paired accuracy is unavailable.
 
-## Checkpoint 4: all PDF pages
+## Reliability, unsuccessful work and cost
 
-PDFs now render every page at 60 DPI, sort numerically, and send all page images in one complete-document request. JPG/PNG bytes, CLI and schema remain compatible. Rendering failure, timeout, missing/empty page output fails before generation; temporary files are cleaned up. No OCR branch, per-page calls, page cap or resolution change. [Compatibility and actual request prompt](PROMPTS.md#checkpoint-4-complete-document-image-request).
+Eight original 3.8 calls failed 503. Two approved backoff/jitter retries also failed: **0/2 successes**, 2.943/2.870-second attempts plus 12.417/24.307-second waits. This unsuccessful access recovery produced no extraction evidence. The 3.6 fallback succeeded; seven further original calls produced one success. Improved Report 06 failed transport after **181.100 seconds**, before an HTTP response was obtained; phase timings and underlying transport cause are unknown. No valid pair or 150/300-DPI experiment exists. See [EXPERIMENTS.md](EXPERIMENTS.md).
 
-Offline verification: 74 tests passed, zero failed/skipped. Real Poppler plus mocked requests confirms report 01 sends one PNG and report 11 sends both PNGs in one call. Synthetic ordering checks pages 1 through 10. Original assets, plan, evaluator and historical evidence are unchanged; baseline rescoring is identical. Live accuracy, latency/cost and large-document limits remain unmeasured. No generation calls or Checkpoint 5 work occurred.
+Original 3.6 attempt time: 398.863 seconds, mean 49.858; successful mean 9.206. Two successes expose 2484 input, 1258 output and 2521 thinking tokens (6263 total). Rates verified 8 October 2026: $0.75/M input, $3.75/M output including thinking. Paid-equivalent mean **$0.008017/report**, not invoice spend. Multiplying this narrow sample by 10000 gives **$80.17/day**, not a representative forecast. Failed usage, final cost and production quota are unknown; Free tier does not establish 10000/day capacity.
+
+## Scope, review and limitations
+
+**RAG:** the document contains the requested data. Retrieving standard ranges encourages the invention failure; no retrieval service is needed for source extraction.
+
+**Fine-tuning:** eight imperfect labelled reports cannot support credible training/generalization across labs. Larger audited held-out data is needed before training.
+
+**Agent:** conversion, one request and validation are bounded steps. Extra calls add latency, cost and failure paths without fixing deterministic value loss.
+
+Offline visual assessment: 04 clean printed PDF; 07 scanned PDF with handwriting; 10 shadowed phone photo; 12 prescription/advised tests. All inputs are supported; no predictions, new labels or accuracy claims. Details: [UNLABELLED_REVIEW.md](UNLABELLED_REVIEW.md).
+
+Decision log: preserve initial 255-word PLAN (df3de42); freeze evaluator (c2e319f); select 3.6 only after approved fallback; reject post-hoc aliases/fabricated scores; separate cleanup and page commits; pause generation after bounded failure. **87 offline tests pass**, including real-baseline Decimal serialization. Mandatory measured before/after improvement and an unsuccessful extraction-quality experiment remain unmet; failed recovery is reported separately. History and safe evidence are included; optional transcripts are absent. No submission, push or email occurred.

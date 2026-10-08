@@ -22,7 +22,12 @@ Rules:
 
 ## Checkpoint 3 prompt
 
-This is the exact PROMPT string in extract.py. It has not been evaluated with live generation. The request still uses one image, temperature 0, maxOutputTokens 16000 and the existing model environment setting; no provider generation-format configuration was added.
+Historical note: the following describes the Checkpoint 3 state. Checkpoint 4
+subsequently added every PDF page, with the prefix documented below. The only
+live improved attempt (Checkpoint 5, Report 06) failed before any model response;
+live prompt effectiveness remains unverified. Exact prompt blocks are unchanged.
+
+This is the exact PROMPT string in extract.py. At Checkpoint 3 the request used one image, temperature 0, maxOutputTokens 16000 and the existing model environment setting; no provider generation-format configuration was added. The current request uses every ordered PDF page.
 
 ```text
 Extract laboratory result rows supported by this document, in printed order.
@@ -53,7 +58,7 @@ Accept exactly one JSON object or one complete enclosing Markdown code fence. Re
 
 The small standard-library validator implements schema.json's current four-field shape; it is not a general JSON Schema engine. Empty names are additionally rejected as unusable rows. Extra properties are permitted by the schema but stripped from emitted rows; no status is computed. Meaningful strings are kept verbatim, including comma grouping; no float coercion, unit conversions, deduplication or medical correction. Literal strings such as "null" or "NaN" remain text, never numbers or missing information. Finite JSON numbers remain numbers; encourage strings when printed decimal precision matters.
 
-Provider failures keep concise sanitized errors and no success JSON. Timeout errors are now handled explicitly; file/conversion failures also exit nonzero. ASCII JSON escaping makes Unicode values portable through Windows stdout without changing decoded values. No automatic retry, fallback, telemetry, schema-generation mode, new dependencies or evaluator changes were added. PDF rendering remains page 1 at 60 DPI; multi-page work is deferred to Checkpoint 4.
+Provider failures keep concise sanitized errors and no success JSON. Timeout errors are handled explicitly; file/conversion failures also exit nonzero. ASCII JSON escaping makes Unicode values portable through Windows stdout without changing decoded values. No automatic retry, fallback, telemetry, schema-generation mode, new dependencies or evaluator changes were added. Page-one-only rendering was retained at Checkpoint 3 and replaced with all-page rendering at Checkpoint 4, still at 60 DPI.
 
 Offline tests establish preservation and failure behavior only. They do not establish improved live extraction accuracy, prevent hallucinations, or remedy the six provider failures in the eight-report baseline. Further comparisons must use GEMINI_MODEL=gemini-3.6-flash unless explicitly approved otherwise.
 

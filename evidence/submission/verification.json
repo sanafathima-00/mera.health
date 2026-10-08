@@ -1,0 +1,71 @@
+{
+  "scope": "Checkpoint 6 local finalization; no generation, submission, push or email",
+  "tests": {
+    "command": "python -B -m unittest discover -p 'test_*.py' -q",
+    "passed": 87,
+    "failed": 0
+  },
+  "extractor_unchanged_from_checkpoint4": true,
+  "frozen_evaluator_unchanged": true,
+  "original_gold_reports_schema_plan_unchanged": true,
+  "historical_evidence_byte_preserved": {
+    "7496210": true,
+    "d3f44e0": true
+  },
+  "reproduced_evaluation": {
+    "baseline": {
+      "exit_code": 1,
+      "views_unchanged": true,
+      "counts_unchanged": true
+    },
+    "baseline_36": {
+      "exit_code": 1,
+      "views_unchanged": true,
+      "counts_unchanged": true
+    },
+    "checkpoint5_single_probe_20261008T145238124815Z": {
+      "exit_code": 2,
+      "views_unchanged": true,
+      "counts_unchanged": true
+    }
+  },
+  "secret_matches": 0,
+  "env_ignored": true,
+  "env_untracked": true,
+  "readme_render": {
+    "readme_sha256": "59e5490fe90c4bc45b581d0ccea612df627acbb132441a72f9e317bed2d000e6",
+    "pages": 2,
+    "page_size": "A4",
+    "body_font": "Helvetica 10pt / 12pt leading",
+    "margins_points": {
+      "left": 36,
+      "right": 36,
+      "top": 32,
+      "bottom": 34
+    },
+    "renderer": "evidence/submission/render_readme.py",
+    "scope": "Full README content; no forced page breaks or omitted sections"
+  },
+  "readme_source_hash_matches_render": true,
+  "readme_visual_review": "Both rendered pages inspected; no visible clipping, overlap or missing sections",
+  "poppler_render_warning": "Symbol display-font warning; rendered text visually checked",
+  "live_evidence": {
+    "generation_attempts": 19,
+    "valid_original_predictions": 2,
+    "failures": 17,
+    "improved_predictions": 0,
+    "valid_pairs": 0,
+    "higher_dpi_live_attempts": 0
+  },
+  "unmet_requirements": [
+    "Measured original/improved extraction comparison",
+    "Evidence of an unsuccessful extraction-quality treatment; only access recovery failed"
+  ],
+  "limitations": [
+    "No representative full-corpus or improved cost estimate",
+    "Billing-link status and quota unverified",
+    "Unlabelled assessment is source inspection only",
+    "Optional agent transcripts absent"
+  ],
+  "readiness": "Locally packaged and reproducible; assessment outcome evidence incomplete"
+}

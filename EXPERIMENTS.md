@@ -135,3 +135,61 @@ zero failed (12 harness tests plus 74 existing tests). Safe plan command reports
 zero generation calls. Protected tracked files and historical evidence have no
 diff. `.env` remains ignored/untracked. An existing untracked preflight evidence
 directory was preserved and is not included in the preparation commit.
+
+## Final experiment review (Checkpoint 6)
+
+External generation is paused. Nineteen live generation attempts, excluding
+metadata checks and zero-call preflights: eight original Gemini 3.8 baseline
+503s, two original 3.8 recovery 503s, one successful original 3.6 fallback,
+seven further original 3.6 baseline attempts (one success, five 503s, one timeout),
+and one failed improved 3.6 Report 06 probe. That is two valid predictions and
+17 failures (15 HTTP 503, two transport/timeout failures). Report 01's reused
+baseline copy is not an additional call. No valid original/improved pair exists.
+
+The revised single-probe authorization accepted the intended project's displayed
+Free-tier badge and privately matched masked key suffix. Exact billing-link
+status and remaining quota stayed unverified; no project settings were changed.
+The one-call probe invoked the committed harness's attempt function directly,
+not run_matrix, using improved revision 9933806, model gemini-3.6-flash, Report 06,
+60 DPI, temperature 0, maxOutputTokens 16000 and timeout 180 seconds. Its evidence
+is evidence/checkpoint5_single_probe_20261008T145238124815Z. The earlier two
+zero-call preflight directories remain unchanged. No retry or model switch followed.
+
+Measured total attempt latency: 181.10009170000194 seconds. Images were rendered
+successfully and request configuration was captured. The observer classified a
+transport exception before entering the HTTP response context. It assigns HTTP
+status before reading the body, so the absent status establishes that body reading
+was not reached. No network phase clocks or original transport exception subtype
+were retained: TimeoutError and URLError share the observer category, and the
+extractor translates either to RuntimeError. We cannot separate rendering time,
+DNS/connect/TLS/request transmission or waiting for headers from this timer. The
+180-second socket timeout is configuration, not proof of a particular failed phase
+or an exact end-to-end deadline. Do not attribute the 1.1-second difference to rendering.
+
+No prediction, usage or provider response body exists for this probe. Its
+schema_valid=false means no validated output, not a measured malformed prediction.
+Frozen metrics have one failed and seven unavailable reports; full aggregate is
+null. Any failed-row zeros are operational accounting, not model reading accuracy.
+No quota/billing HTTP error was observed; neither quota nor billing was thereby verified.
+
+Live original predictions exist only for reports 01 and 08. Original/adjudicated
+F1s: 92.86%/100% (01) and 16.67%/16.67% (08). Report 08's frozen name-matching
+limitations must stay visible. Baseline reliability, token/cost evidence and
+per-report details remain in BASELINE_36.md. Improved accuracy, cost and successful
+latency are unavailable. All-page request construction and value/parser behavior
+are offline verified; model benefits remain unproven. The two backoff retries
+were an unsuccessful access experiment (0/2 successes), not an unsuccessful
+extraction-quality treatment. 150/300 DPI were never run; that brief deliverable
+gap remains explicit.
+
+Checkpoint 6 fixes only the harness's Decimal diagnostic serializer. Finite
+Decimal values become exact strings, matching the frozen evaluator CLI, rather
+than lossy floats. Non-finite Decimal and unrelated unsupported objects are rejected.
+The regression replays real saved-baseline diagnostics, confirms score views and
+counts unchanged, and preserves a 30-place decimal. No historical prediction,
+extractor source, evaluator policy or evidence is rewritten.
+
+The four unlabelled inputs are assessed by source inspection in UNLABELLED_REVIEW.md,
+not included in accuracy metrics. README.md is the concise final synthesis;
+evidence/submission/README.pdf records its locally rendered layout. Agent transcripts
+are optional and absent. External submission, push and email were not performed.
