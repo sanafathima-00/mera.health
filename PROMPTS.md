@@ -56,3 +56,19 @@ The small standard-library validator implements schema.json's current four-field
 Provider failures keep concise sanitized errors and no success JSON. Timeout errors are now handled explicitly; file/conversion failures also exit nonzero. ASCII JSON escaping makes Unicode values portable through Windows stdout without changing decoded values. No automatic retry, fallback, telemetry, schema-generation mode, new dependencies or evaluator changes were added. PDF rendering remains page 1 at 60 DPI; multi-page work is deferred to Checkpoint 4.
 
 Offline tests establish preservation and failure behavior only. They do not establish improved live extraction accuracy, prevent hallucinations, or remedy the six provider failures in the eight-report baseline. Further comparisons must use GEMINI_MODEL=gemini-3.6-flash unless explicitly approved otherwise.
+
+## Checkpoint 4: complete-document image request
+
+The Checkpoint 3 PROMPT remains unchanged. For more than one image, the actual request text prepends exactly:
+
+```text
+Images are consecutive document pages in order. Extract all pages.
+```
+
+All ordered inline image parts precede that single text part in one generateContent request. A one-image request still uses the unmodified Checkpoint 3 prompt. Provider completion and strict local validation remain unchanged.
+
+Compatibility checked 8 October 2026 against [Gemini 3.6 Flash image inputs](https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash), [multi-image prompting](https://ai.google.dev/gemini-api/docs/image-understanding), and the [generateContent multipart Content/Part contract](https://ai.google.dev/api/generate-content). This is documentation verification, not a live multi-image generation test. The image guide documents a 3600-image provider maximum. No arbitrary application page cap or silent truncation was added; provider payload/token/image limits may still reject large documents.
+
+PDF rendering now uses pdftoppm -r 60 -png without first/last-page or singlefile flags. Output filenames are sorted by integer page number and must form a consecutive sequence beginning at 1; no missing, empty or unreadable page image is accepted. A rendering timeout of 60 seconds bounds conversion and fails the complete document visibly. Temporary files are removed after encoding, before the model request, on both success and failure. Memory use grows with encoded document size. No File API, OCR branch, per-page request loop, retry or resolution experiment was added.
+
+Offline verification uses real Poppler for supplied report 01 (one page) and report 11 (two pages), with the network replaced by a mocked provider. The tests inspect the actual serialized request and require one call containing respectively one and two PNG parts. Synthetic ten-page output verifies numeric ordering; failure tests verify cleanup/no request despite partially rendered output. None of these tests measures extraction accuracy.

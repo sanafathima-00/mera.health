@@ -71,3 +71,9 @@ Decision log: preserved the original model failures and two approved retries; se
 [Actual prompts and rationale](PROMPTS.md). Removed numeric coercion and inferred status/ranges; preserve strings, finite numbers, units and nulls. Strict JSON/row validation and provider completion checks fail visibly instead of returning empty success. PDF conversion stays page 1 at 60 DPI. Use `GEMINI_MODEL=gemini-3.6-flash` for future comparisons; no generation calls were made in this checkpoint.
 
 Verification: `python -B -m unittest discover -p 'test_*.py' -q` passes 64 tests (26 extractor, 38 evaluator), including mocked provider/CLI failures and saved baseline fixtures. Protected labels/reports/plan/schema and frozen evaluator remain unchanged. Saved baseline rescoring is identical. These are offline correctness fixes, not a measured extraction-accuracy improvement; live evaluation and all-page support remain pending.
+
+## Checkpoint 4: all PDF pages
+
+PDFs now render every page at 60 DPI, sort numerically, and send all page images in one complete-document request. JPG/PNG bytes, CLI and schema remain compatible. Rendering failure, timeout, missing/empty page output fails before generation; temporary files are cleaned up. No OCR branch, per-page calls, page cap or resolution change. [Compatibility and actual request prompt](PROMPTS.md#checkpoint-4-complete-document-image-request).
+
+Offline verification: 74 tests passed, zero failed/skipped. Real Poppler plus mocked requests confirms report 01 sends one PNG and report 11 sends both PNGs in one call. Synthetic ordering checks pages 1 through 10. Original assets, plan, evaluator and historical evidence are unchanged; baseline rescoring is identical. Live accuracy, latency/cost and large-document limits remain unmeasured. No generation calls or Checkpoint 5 work occurred.

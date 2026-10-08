@@ -43,29 +43,51 @@ Rules:
 MEDIA_TYPES = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png"}
 
 
-def load_image(path: Path) -> tuple[str, str]:
-    """Return (media_type, base64 data) for the report."""
+def load_images(path: Path) -> list[tuple[str, str]]:
+    """Return every document page as (media_type, base64 data), in order."""
+    if not path.is_file():
+        raise RuntimeError("Report file is missing or is not a regular file.")
     if path.suffix.lower() == ".pdf":
         with tempfile.TemporaryDirectory() as directory:
             prefix = Path(directory) / "page"
             try:
-                subprocess.run(["pdftoppm", "-f", "1", "-l", "1", "-singlefile", "-r", str(DPI),
-                                "-png", str(path), str(prefix)], check=True, capture_output=True)
+                subprocess.run(["pdftoppm", "-r", str(DPI), "-png", str(path), str(prefix)],
+                               check=True, capture_output=True, timeout=60)
             except FileNotFoundError:
                 raise RuntimeError("Install Poppler (pdftoppm); see README.md.") from None
-            png = prefix.with_suffix(".png").read_bytes()
-        return "image/png", base64.standard_b64encode(png).decode()
-    return MEDIA_TYPES[path.suffix.lower()], base64.standard_b64encode(path.read_bytes()).decode()
+            except subprocess.TimeoutExpired:
+                raise RuntimeError("PDF rendering timed out; no extraction attempted.") from None
+            except (OSError, subprocess.CalledProcessError):
+                raise RuntimeError("PDF rendering failed; no extraction attempted.") from None
+            try:
+                pages = sorted(Path(directory).glob("page-*.png"),
+                               key=lambda page: int(page.stem.rsplit("-", 1)[1]))
+            except ValueError:
+                raise RuntimeError("PDF rendering produced invalid page filenames.") from None
+            if not pages or [int(page.stem.rsplit("-", 1)[1]) for page in pages] != list(range(1, len(pages) + 1)):
+                raise RuntimeError("PDF rendering produced missing or invalid page images.")
+            try:
+                images = [("image/png", base64.standard_b64encode(page.read_bytes()).decode()) for page in pages]
+            except OSError:
+                raise RuntimeError("PDF page images could not be read; no extraction attempted.") from None
+            if any(not data for _, data in images):
+                raise RuntimeError("PDF rendering produced an empty page image.")
+        return images
+    if path.suffix.lower() not in MEDIA_TYPES:
+        raise RuntimeError("Unsupported report format; use PDF, JPG, JPEG or PNG.")
+    return [(MEDIA_TYPES[path.suffix.lower()], base64.standard_b64encode(path.read_bytes()).decode())]
 
 
-def call_model(media_type: str, data: str) -> str:
+def call_model(images: list[tuple[str, str]]) -> str:
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
         raise RuntimeError("Set GEMINI_API_KEY; see README.md. No API call made.")
+    if not images:
+        raise RuntimeError("No document images available; no API call made.")
+    prompt = PROMPT if len(images) == 1 else "Images are consecutive document pages in order. Extract all pages.\n" + PROMPT
+    parts = [{"inlineData": {"mimeType": media_type, "data": data}} for media_type, data in images]
     body = {
-        "contents": [{"role": "user", "parts": [
-            {"inlineData": {"mimeType": media_type, "data": data}}, {"text": PROMPT},
-        ]}],
+        "contents": [{"role": "user", "parts": parts + [{"text": prompt}]}],
         "generationConfig": {"temperature": 0, "maxOutputTokens": 16000},
     }
     request = urllib.request.Request(
@@ -147,8 +169,7 @@ def clean(tests: list[dict]) -> list[dict]:
 
 
 def extract(path: Path) -> dict:
-    media_type, data = load_image(path)
-    return {"tests": parse(call_model(media_type, data))}
+    return {"tests": parse(call_model(load_images(path)))}
 
 
 if __name__ == "__main__":
