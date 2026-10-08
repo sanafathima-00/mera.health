@@ -1,0 +1,121 @@
+{
+  "status": "unavailable",
+  "measurement": "Saved predictions only; evaluator does not run extraction",
+  "message": "Scoring requires baseline outputs; missing predictions are not measured failures",
+  "report_status_counts": {
+    "valid": 0,
+    "invalid": 0,
+    "failed": 0,
+    "unavailable": 8
+  },
+  "reports": [
+    {
+      "report": "report_01",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_02",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_03",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_05",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_06",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_08",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_09",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_11",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    }
+  ],
+  "views": {
+    "original": {
+      "reports": {
+        "report_01": null,
+        "report_02": null,
+        "report_03": null,
+        "report_05": null,
+        "report_06": null,
+        "report_08": null,
+        "report_09": null,
+        "report_11": null
+      },
+      "aggregate": null,
+      "observed_subset_aggregate": null
+    },
+    "adjudicated": {
+      "reports": {
+        "report_01": null,
+        "report_02": null,
+        "report_03": null,
+        "report_05": null,
+        "report_06": null,
+        "report_08": null,
+        "report_09": null,
+        "report_11": null
+      },
+      "aggregate": null,
+      "observed_subset_aggregate": null
+    }
+  },
+  "policy_version": "1.0",
+  "adjudications": [
+    {
+      "report": "report_01",
+      "row": 14,
+      "test_name": "Platelet Count",
+      "field": "value",
+      "original": "304000",
+      "corrected": "340000",
+      "source": "reports/report_01.pdf, page 1, final CBC row: Platelet Count",
+      "reason": "PDF text and visual inspection both show 340000. Supplied gold/report_01.json lines 81\u201385 say 304000. Apply only in a copied adjudicated view; never modify gold."
+    }
+  ],
+  "unlabelled_reports": {
+    "reports": [
+      "report_04",
+      "report_07",
+      "report_10",
+      "report_12"
+    ],
+    "status": "Not scored in Checkpoint 1. Candidate-authored review references and live outputs remain future work."
+  },
+  "cost_and_extraction_latency": null,
+  "fingerprints": {
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\evaluate.py": "3e57c6c5e3003880c78559b00395337db6b7286eb71aef5f2c3844cf832ab08a",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\evaluation_cases.json": "dd54002acc03632095085185d09b3e1f9f98ad67e35d61112580a7b34989f790",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\schema.json": "e5396dd59385b9f04e123ae1de5915bf5ada5c54b87b2b646e7a3aacb93558fd",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_01.json": "567656e32dd0de79cecc78583b8087db9a7f8e979cfd75ae8e41b86575d8a8e4",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_02.json": "38a528678520593e96b7438900c7e542c56e0bee2eb3227a864b8ffb1c93bc3b",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_03.json": "3258d95fd72f80fc6e1dccad53447ffb20fd3b760a9baaf3c940ab9a74446c21",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_05.json": "b513eeeb88b09212a61adff3ff9aad95f76386ebe1c272effac631256eb04d1b",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_06.json": "a9086274da1fd989d26db98f44c1a5e777e8d71de770c9ae8d6012b20f3f3dfc",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_08.json": "0f007bfac2c76016d51f6cae184d68f982a96b1c94172f55f2e316210bdf4a3a",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_09.json": "04d7a66594947c7ade08c0f333e794e9da9fb81f9038df93e401aaf80abace30",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_11.json": "48ec31ae54615cbf624d6e70c2f44ed8222ad2dc263b0c6d416a832e13136304"
+  },
+  "prediction_fingerprints": {},
+  "manifest_sha256": null
+}

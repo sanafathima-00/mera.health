@@ -1,0 +1,3621 @@
+{
+  "status": "complete",
+  "measurement": "Saved predictions only; evaluator does not run extraction",
+  "message": "All supplied report attempts accounted for",
+  "report_status_counts": {
+    "valid": 0,
+    "invalid": 0,
+    "failed": 8,
+    "unavailable": 0
+  },
+  "reports": [
+    {
+      "report": "report_01",
+      "status": "failed",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    {
+      "report": "report_02",
+      "status": "failed",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    {
+      "report": "report_03",
+      "status": "failed",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    {
+      "report": "report_05",
+      "status": "failed",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    {
+      "report": "report_06",
+      "status": "failed",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    {
+      "report": "report_08",
+      "status": "failed",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    {
+      "report": "report_09",
+      "status": "failed",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    {
+      "report": "report_11",
+      "status": "failed",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    }
+  ],
+  "views": {
+    "original": {
+      "reports": {
+        "report_01": {
+          "expected_rows": 14,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Haemoglobin",
+                "value": "13.5",
+                "unit": "g/dL",
+                "reference_range": "13.0 - 17.0"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Total RBC Count",
+                "value": "5.71",
+                "unit": "mill/cumm",
+                "reference_range": "4.50 - 5.50"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Packed Cell Volume (PCV)",
+                "value": "48.8",
+                "unit": "%",
+                "reference_range": "40.0 - 50.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "MCV",
+                "value": "77.9",
+                "unit": "fL",
+                "reference_range": "83.0 - 101.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "MCH",
+                "value": "27.9",
+                "unit": "pg",
+                "reference_range": "27.0 - 32.0"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "MCHC",
+                "value": "34.2",
+                "unit": "g/dL",
+                "reference_range": "31.5 - 34.5"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "RDW-CV",
+                "value": "12.2",
+                "unit": "%",
+                "reference_range": "11.6 - 14.0"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Total WBC Count",
+                "value": "9200",
+                "unit": "/cumm",
+                "reference_range": "4000 - 10000"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Neutrophils",
+                "value": "73",
+                "unit": "%",
+                "reference_range": "40 - 80"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Lymphocytes",
+                "value": "33",
+                "unit": "%",
+                "reference_range": "20 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Eosinophils",
+                "value": "0",
+                "unit": "%",
+                "reference_range": "1 - 6"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "Monocytes",
+                "value": "8",
+                "unit": "%",
+                "reference_range": "2 - 10"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Basophils",
+                "value": "1",
+                "unit": "%",
+                "reference_range": "0 - 2"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Platelet Count",
+                "value": "304000",
+                "unit": "/cumm",
+                "reference_range": "150000 - 410000"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_02": {
+          "expected_rows": 16,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 16,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 16,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 16,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 16,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Cholesterol - Total",
+                "value": "179",
+                "unit": "mg/dL",
+                "reference_range": "< 200"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Serum Triglycerides",
+                "value": "91",
+                "unit": "mg/dL",
+                "reference_range": "< 150"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Cholesterol - HDL",
+                "value": "36",
+                "unit": "mg/dL",
+                "reference_range": "> 40"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Cholesterol - LDL",
+                "value": "121",
+                "unit": "mg/dL",
+                "reference_range": "< 100"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Cholesterol - VLDL",
+                "value": "21",
+                "unit": "mg/dL",
+                "reference_range": "< 30"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "TC/HDL Ratio",
+                "value": "5.6",
+                "unit": null,
+                "reference_range": "< 5.0"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "Total Bilirubin",
+                "value": "1.06",
+                "unit": "mg/dL",
+                "reference_range": "0.30 - 1.20"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Direct Bilirubin",
+                "value": "0.20",
+                "unit": "mg/dL",
+                "reference_range": "0.00 - 0.30"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Indirect Bilirubin",
+                "value": "0.44",
+                "unit": "mg/dL",
+                "reference_range": "0.20 - 0.90"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Aspartate Aminotransferase",
+                "value": "50",
+                "unit": "U/L",
+                "reference_range": "5 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Alanine Aminotransferase",
+                "value": "2",
+                "unit": "U/L",
+                "reference_range": "5 - 45"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "ALP",
+                "value": "118",
+                "unit": "U/L",
+                "reference_range": "40 - 129"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Protein Total",
+                "value": "7.1",
+                "unit": "g/dL",
+                "reference_range": "6.4 - 8.3"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Serum Albumin",
+                "value": "4.9",
+                "unit": "g/dL",
+                "reference_range": "3.5 - 5.2"
+              }
+            },
+            {
+              "row": 15,
+              "data": {
+                "test_name": "Serum Globulin",
+                "value": "2.5",
+                "unit": "g/dL",
+                "reference_range": "2.0 - 3.5"
+              }
+            },
+            {
+              "row": 16,
+              "data": {
+                "test_name": "Albumin/Globulin Ratio",
+                "value": "2.3",
+                "unit": null,
+                "reference_range": "1.0 - 2.1"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_03": {
+          "expected_rows": 8,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 8,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 8,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 8,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 8,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "T3",
+                "value": "179",
+                "unit": "ng/dL",
+                "reference_range": null
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "T4",
+                "value": "10.9",
+                "unit": "\u00b5g/dL",
+                "reference_range": null
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "TSH (Ultrasensitive)",
+                "value": "2.49",
+                "unit": "\u00b5IU/mL",
+                "reference_range": "0.27 - 4.20"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Vit D Total",
+                "value": "58.9",
+                "unit": "ng/mL",
+                "reference_range": "30.0 - 100.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Vit B12",
+                "value": "359",
+                "unit": "pg/mL",
+                "reference_range": "197 - 771"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Glycated Hb",
+                "value": "6.0",
+                "unit": "%",
+                "reference_range": null
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "FBS",
+                "value": "88",
+                "unit": "mg/dL",
+                "reference_range": "70 - 100"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "PPBS",
+                "value": "95",
+                "unit": "mg/dL",
+                "reference_range": "70 - 140"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_05": {
+          "expected_rows": 14,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Haemoglobin",
+                "value": "11.9",
+                "unit": "g/dL",
+                "reference_range": "13.0 - 17.0"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Total RBC Count",
+                "value": "5.83",
+                "unit": "mill/cumm",
+                "reference_range": "4.50 - 5.50"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Packed Cell Volume (PCV)",
+                "value": "45.9",
+                "unit": "%",
+                "reference_range": "40.0 - 50.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "MCV",
+                "value": "94.9",
+                "unit": "fL",
+                "reference_range": "83.0 - 101.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "MCH",
+                "value": "28.3",
+                "unit": "pg",
+                "reference_range": "27.0 - 32.0"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "MCHC",
+                "value": "33.5",
+                "unit": "g/dL",
+                "reference_range": "31.5 - 34.5"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "RDW-CV",
+                "value": "13.6",
+                "unit": "%",
+                "reference_range": "11.6 - 14.0"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Total WBC Count",
+                "value": "2800",
+                "unit": "/cumm",
+                "reference_range": "4000 - 10000"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Neutrophils",
+                "value": "32",
+                "unit": "%",
+                "reference_range": "40 - 80"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Lymphocytes",
+                "value": "16",
+                "unit": "%",
+                "reference_range": "20 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Eosinophils",
+                "value": "5",
+                "unit": "%",
+                "reference_range": "1 - 6"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "Monocytes",
+                "value": "6",
+                "unit": "%",
+                "reference_range": "2 - 10"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Basophils",
+                "value": "2",
+                "unit": "%",
+                "reference_range": "0 - 2"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Platelet Count",
+                "value": "3.03",
+                "unit": "lakh/cumm",
+                "reference_range": "1.50 - 4.10"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_06": {
+          "expected_rows": 12,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Colour",
+                "value": "Dark Yellow",
+                "unit": null,
+                "reference_range": "Pale Yellow"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Clarity",
+                "value": "Clear",
+                "unit": null,
+                "reference_range": "Clear"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "pH",
+                "value": "6.5",
+                "unit": null,
+                "reference_range": "5.0 - 8.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Specific Gravity",
+                "value": "1.020",
+                "unit": null,
+                "reference_range": "1.005 - 1.030"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Albumin",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Sugar",
+                "value": "Present (+)",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "Ketones",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Leucocytes",
+                "value": "2-3",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Erythrocytes",
+                "value": "1-2",
+                "unit": "/hpf",
+                "reference_range": "Nil"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Squamous Epithelial Cells",
+                "value": "1-2",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "CRP",
+                "value": "< 0.5",
+                "unit": "mg/L",
+                "reference_range": "< 5.0"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "E.S.R. (Westergren)",
+                "value": "13",
+                "unit": "mm/hr",
+                "reference_range": "0 - 15"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 9,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_08": {
+          "expected_rows": 6,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 6,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 6,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 6,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 6,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "S. Cholesterol",
+                "value": "155",
+                "unit": "mg/dL",
+                "reference_range": "< 200"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "TG",
+                "value": "106",
+                "unit": "mg/dL",
+                "reference_range": "< 150"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "HDL-C",
+                "value": "60",
+                "unit": "mg/dL",
+                "reference_range": "> 40"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "LDL-C (Direct)",
+                "value": "73",
+                "unit": "mg/dL",
+                "reference_range": "< 100"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "VLDL",
+                "value": "23",
+                "unit": "mg/dL",
+                "reference_range": "< 30"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Chol/HDL",
+                "value": "4.3",
+                "unit": null,
+                "reference_range": "< 5.0"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_09": {
+          "expected_rows": 14,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Hemoglobin (Hb)",
+                "value": "17.4",
+                "unit": "g/dL",
+                "reference_range": "13.0 - 17.0"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "RBC Count",
+                "value": "4.85",
+                "unit": "mill/cumm",
+                "reference_range": "4.50 - 5.50"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Hematocrit",
+                "value": "47.7",
+                "unit": "%",
+                "reference_range": "40.0 - 50.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Mean Corpuscular Volume",
+                "value": "106.6",
+                "unit": "fL",
+                "reference_range": "83.0 - 101.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Mean Corpuscular Hb",
+                "value": "26.1",
+                "unit": "pg",
+                "reference_range": "27.0 - 32.0"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Mean Corp. Hb Conc.",
+                "value": "32.6",
+                "unit": "g/dL",
+                "reference_range": "31.5 - 34.5"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "RDW",
+                "value": "12.8",
+                "unit": "%",
+                "reference_range": "11.6 - 14.0"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Total Leucocyte Count",
+                "value": "4700",
+                "unit": "/cumm",
+                "reference_range": "4000 - 10000"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Neutrophils",
+                "value": "52",
+                "unit": "%",
+                "reference_range": "40 - 80"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Lymphocytes",
+                "value": "35",
+                "unit": "%",
+                "reference_range": "20 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Eosinophils",
+                "value": "5",
+                "unit": "%",
+                "reference_range": "1 - 6"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "Monocytes",
+                "value": "4",
+                "unit": "%",
+                "reference_range": "2 - 10"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Basophils",
+                "value": "2",
+                "unit": "%",
+                "reference_range": "0 - 2"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Platelets",
+                "value": "2,29,000",
+                "unit": "/cumm",
+                "reference_range": "1,50,000 - 4,10,000"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_11": {
+          "expected_rows": 54,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 54,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 54,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 54,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 54,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Hemoglobin (Hb)",
+                "value": "15.0",
+                "unit": "g/dL",
+                "reference_range": "13.0 - 17.0"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "RBC Count",
+                "value": "4.20",
+                "unit": "mill/cumm",
+                "reference_range": "4.50 - 5.50"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Hematocrit",
+                "value": "46.3",
+                "unit": "%",
+                "reference_range": "40.0 - 50.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Mean Corpuscular Volume",
+                "value": "97.9",
+                "unit": "fL",
+                "reference_range": "83.0 - 101.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Mean Corpuscular Hb",
+                "value": "28.5",
+                "unit": "pg",
+                "reference_range": "27.0 - 32.0"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Mean Corp. Hb Conc.",
+                "value": "32.6",
+                "unit": "g/dL",
+                "reference_range": "31.5 - 34.5"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "RDW",
+                "value": "13.6",
+                "unit": "%",
+                "reference_range": "11.6 - 14.0"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Total Leucocyte Count",
+                "value": "8000",
+                "unit": "/cumm",
+                "reference_range": "4000 - 10000"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Neutrophils",
+                "value": "48",
+                "unit": "%",
+                "reference_range": "40 - 80"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Lymphocytes",
+                "value": "23",
+                "unit": "%",
+                "reference_range": "20 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Eosinophils",
+                "value": "0",
+                "unit": "%",
+                "reference_range": "1 - 6"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "Monocytes",
+                "value": "5",
+                "unit": "%",
+                "reference_range": "2 - 10"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Basophils",
+                "value": "1",
+                "unit": "%",
+                "reference_range": "0 - 2"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Platelets",
+                "value": "2,03,000",
+                "unit": "/cumm",
+                "reference_range": "1,50,000 - 4,10,000"
+              }
+            },
+            {
+              "row": 15,
+              "data": {
+                "test_name": "Cholesterol - Total",
+                "value": "188",
+                "unit": "mg/dL",
+                "reference_range": "< 200"
+              }
+            },
+            {
+              "row": 16,
+              "data": {
+                "test_name": "Serum Triglycerides",
+                "value": "88",
+                "unit": "mg/dL",
+                "reference_range": "< 150"
+              }
+            },
+            {
+              "row": 17,
+              "data": {
+                "test_name": "Cholesterol - HDL",
+                "value": "60",
+                "unit": "mg/dL",
+                "reference_range": "> 40"
+              }
+            },
+            {
+              "row": 18,
+              "data": {
+                "test_name": "Cholesterol - LDL",
+                "value": "80",
+                "unit": "mg/dL",
+                "reference_range": "< 100"
+              }
+            },
+            {
+              "row": 19,
+              "data": {
+                "test_name": "Cholesterol - VLDL",
+                "value": "23",
+                "unit": "mg/dL",
+                "reference_range": "< 30"
+              }
+            },
+            {
+              "row": 20,
+              "data": {
+                "test_name": "TC/HDL Ratio",
+                "value": "3.3",
+                "unit": null,
+                "reference_range": "< 5.0"
+              }
+            },
+            {
+              "row": 21,
+              "data": {
+                "test_name": "Total Bilirubin",
+                "value": "1.31",
+                "unit": "mg/dL",
+                "reference_range": "0.30 - 1.20"
+              }
+            },
+            {
+              "row": 22,
+              "data": {
+                "test_name": "Direct Bilirubin",
+                "value": "0.07",
+                "unit": "mg/dL",
+                "reference_range": "0.00 - 0.30"
+              }
+            },
+            {
+              "row": 23,
+              "data": {
+                "test_name": "Indirect Bilirubin",
+                "value": "0.41",
+                "unit": "mg/dL",
+                "reference_range": "0.20 - 0.90"
+              }
+            },
+            {
+              "row": 24,
+              "data": {
+                "test_name": "Aspartate Aminotransferase",
+                "value": "2",
+                "unit": "U/L",
+                "reference_range": "5 - 40"
+              }
+            },
+            {
+              "row": 25,
+              "data": {
+                "test_name": "Alanine Aminotransferase",
+                "value": "2",
+                "unit": "U/L",
+                "reference_range": "5 - 45"
+              }
+            },
+            {
+              "row": 26,
+              "data": {
+                "test_name": "ALP",
+                "value": "74",
+                "unit": "U/L",
+                "reference_range": "40 - 129"
+              }
+            },
+            {
+              "row": 27,
+              "data": {
+                "test_name": "Protein Total",
+                "value": "7.2",
+                "unit": "g/dL",
+                "reference_range": "6.4 - 8.3"
+              }
+            },
+            {
+              "row": 28,
+              "data": {
+                "test_name": "Serum Albumin",
+                "value": "4.9",
+                "unit": "g/dL",
+                "reference_range": "3.5 - 5.2"
+              }
+            },
+            {
+              "row": 29,
+              "data": {
+                "test_name": "Serum Globulin",
+                "value": "3.7",
+                "unit": "g/dL",
+                "reference_range": "2.0 - 3.5"
+              }
+            },
+            {
+              "row": 30,
+              "data": {
+                "test_name": "Albumin/Globulin Ratio",
+                "value": "1.1",
+                "unit": null,
+                "reference_range": "1.0 - 2.1"
+              }
+            },
+            {
+              "row": 31,
+              "data": {
+                "test_name": "Urea",
+                "value": "42",
+                "unit": "mg/dL",
+                "reference_range": "15 - 40"
+              }
+            },
+            {
+              "row": 32,
+              "data": {
+                "test_name": "Creatinine",
+                "value": "1.00",
+                "unit": "mg/dL",
+                "reference_range": "0.70 - 1.30"
+              }
+            },
+            {
+              "row": 33,
+              "data": {
+                "test_name": "Serum Uric Acid",
+                "value": "6.5",
+                "unit": "mg/dL",
+                "reference_range": "3.5 - 7.2"
+              }
+            },
+            {
+              "row": 34,
+              "data": {
+                "test_name": "Sodium (Na+)",
+                "value": "142",
+                "unit": "mmol/L",
+                "reference_range": "136 - 146"
+              }
+            },
+            {
+              "row": 35,
+              "data": {
+                "test_name": "Potassium (K+)",
+                "value": "3.9",
+                "unit": "mmol/L",
+                "reference_range": "3.5 - 5.1"
+              }
+            },
+            {
+              "row": 36,
+              "data": {
+                "test_name": "Chloride (Cl-)",
+                "value": "100",
+                "unit": "mmol/L",
+                "reference_range": "98 - 107"
+              }
+            },
+            {
+              "row": 37,
+              "data": {
+                "test_name": "Triiodothyronine (T3)",
+                "value": "186",
+                "unit": "ng/dL",
+                "reference_range": "80 - 200"
+              }
+            },
+            {
+              "row": 38,
+              "data": {
+                "test_name": "Thyroxine (T4)",
+                "value": "13.2",
+                "unit": "\u00b5g/dL",
+                "reference_range": "5.1 - 14.1"
+              }
+            },
+            {
+              "row": 39,
+              "data": {
+                "test_name": "Thyroid Stimulating Hormone",
+                "value": "1.45",
+                "unit": "\u00b5IU/mL",
+                "reference_range": "0.27 - 4.20"
+              }
+            },
+            {
+              "row": 40,
+              "data": {
+                "test_name": "Glycosylated Haemoglobin (HbA1c)",
+                "value": "3.6",
+                "unit": "%",
+                "reference_range": "< 5.7"
+              }
+            },
+            {
+              "row": 41,
+              "data": {
+                "test_name": "Glucose - Fasting",
+                "value": "94",
+                "unit": "mg/dL",
+                "reference_range": "70 - 100"
+              }
+            },
+            {
+              "row": 42,
+              "data": {
+                "test_name": "Glucose - PP",
+                "value": "80",
+                "unit": "mg/dL",
+                "reference_range": "70 - 140"
+              }
+            },
+            {
+              "row": 43,
+              "data": {
+                "test_name": "25-Hydroxy Vitamin D",
+                "value": "118.8",
+                "unit": "ng/mL",
+                "reference_range": "30.0 - 100.0"
+              }
+            },
+            {
+              "row": 44,
+              "data": {
+                "test_name": "Cyanocobalamin (B12)",
+                "value": "498",
+                "unit": "pg/mL",
+                "reference_range": "197 - 771"
+              }
+            },
+            {
+              "row": 45,
+              "data": {
+                "test_name": "Color",
+                "value": "Pale Yellow",
+                "unit": null,
+                "reference_range": "Pale Yellow"
+              }
+            },
+            {
+              "row": 46,
+              "data": {
+                "test_name": "Appearance",
+                "value": "Clear",
+                "unit": null,
+                "reference_range": "Clear"
+              }
+            },
+            {
+              "row": 47,
+              "data": {
+                "test_name": "Reaction (pH)",
+                "value": "6.0",
+                "unit": null,
+                "reference_range": "5.0 - 8.0"
+              }
+            },
+            {
+              "row": 48,
+              "data": {
+                "test_name": "Sp. Gravity",
+                "value": "1.015",
+                "unit": null,
+                "reference_range": "1.005 - 1.030"
+              }
+            },
+            {
+              "row": 49,
+              "data": {
+                "test_name": "Urine Protein",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 50,
+              "data": {
+                "test_name": "Urine Glucose",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 51,
+              "data": {
+                "test_name": "Ketone Bodies",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 52,
+              "data": {
+                "test_name": "Pus Cells (WBC)",
+                "value": "8-10",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 53,
+              "data": {
+                "test_name": "RBC",
+                "value": "Nil",
+                "unit": "/hpf",
+                "reference_range": "Nil"
+              }
+            },
+            {
+              "row": 54,
+              "data": {
+                "test_name": "Epithelial Cells",
+                "value": "3-4",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 8,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        }
+      },
+      "aggregate": {
+        "expected_rows": 138,
+        "predicted_rows": 0,
+        "matched_rows": 0,
+        "correct_rows": 0,
+        "qualifier_expected": 17,
+        "qualifier_correct": 0,
+        "invented_missing_ranges": 0,
+        "exact_name_matches": 0,
+        "coverage": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "complete_row": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "macro_complete_row_f1": 0.0,
+        "field_accuracy": {
+          "test_name": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 138,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "value": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 138,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "unit": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 138,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "reference_range": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 138,
+            "among_matched": null,
+            "over_expected": 0.0
+          }
+        },
+        "missing_rows": 138,
+        "unsupported_rows": 0
+      },
+      "observed_subset_aggregate": null
+    },
+    "adjudicated": {
+      "reports": {
+        "report_01": {
+          "expected_rows": 14,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Haemoglobin",
+                "value": "13.5",
+                "unit": "g/dL",
+                "reference_range": "13.0 - 17.0"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Total RBC Count",
+                "value": "5.71",
+                "unit": "mill/cumm",
+                "reference_range": "4.50 - 5.50"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Packed Cell Volume (PCV)",
+                "value": "48.8",
+                "unit": "%",
+                "reference_range": "40.0 - 50.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "MCV",
+                "value": "77.9",
+                "unit": "fL",
+                "reference_range": "83.0 - 101.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "MCH",
+                "value": "27.9",
+                "unit": "pg",
+                "reference_range": "27.0 - 32.0"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "MCHC",
+                "value": "34.2",
+                "unit": "g/dL",
+                "reference_range": "31.5 - 34.5"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "RDW-CV",
+                "value": "12.2",
+                "unit": "%",
+                "reference_range": "11.6 - 14.0"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Total WBC Count",
+                "value": "9200",
+                "unit": "/cumm",
+                "reference_range": "4000 - 10000"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Neutrophils",
+                "value": "73",
+                "unit": "%",
+                "reference_range": "40 - 80"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Lymphocytes",
+                "value": "33",
+                "unit": "%",
+                "reference_range": "20 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Eosinophils",
+                "value": "0",
+                "unit": "%",
+                "reference_range": "1 - 6"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "Monocytes",
+                "value": "8",
+                "unit": "%",
+                "reference_range": "2 - 10"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Basophils",
+                "value": "1",
+                "unit": "%",
+                "reference_range": "0 - 2"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Platelet Count",
+                "value": "340000",
+                "unit": "/cumm",
+                "reference_range": "150000 - 410000"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_02": {
+          "expected_rows": 16,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 16,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 16,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 16,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 16,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Cholesterol - Total",
+                "value": "179",
+                "unit": "mg/dL",
+                "reference_range": "< 200"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Serum Triglycerides",
+                "value": "91",
+                "unit": "mg/dL",
+                "reference_range": "< 150"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Cholesterol - HDL",
+                "value": "36",
+                "unit": "mg/dL",
+                "reference_range": "> 40"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Cholesterol - LDL",
+                "value": "121",
+                "unit": "mg/dL",
+                "reference_range": "< 100"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Cholesterol - VLDL",
+                "value": "21",
+                "unit": "mg/dL",
+                "reference_range": "< 30"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "TC/HDL Ratio",
+                "value": "5.6",
+                "unit": null,
+                "reference_range": "< 5.0"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "Total Bilirubin",
+                "value": "1.06",
+                "unit": "mg/dL",
+                "reference_range": "0.30 - 1.20"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Direct Bilirubin",
+                "value": "0.20",
+                "unit": "mg/dL",
+                "reference_range": "0.00 - 0.30"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Indirect Bilirubin",
+                "value": "0.44",
+                "unit": "mg/dL",
+                "reference_range": "0.20 - 0.90"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Aspartate Aminotransferase",
+                "value": "50",
+                "unit": "U/L",
+                "reference_range": "5 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Alanine Aminotransferase",
+                "value": "2",
+                "unit": "U/L",
+                "reference_range": "5 - 45"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "ALP",
+                "value": "118",
+                "unit": "U/L",
+                "reference_range": "40 - 129"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Protein Total",
+                "value": "7.1",
+                "unit": "g/dL",
+                "reference_range": "6.4 - 8.3"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Serum Albumin",
+                "value": "4.9",
+                "unit": "g/dL",
+                "reference_range": "3.5 - 5.2"
+              }
+            },
+            {
+              "row": 15,
+              "data": {
+                "test_name": "Serum Globulin",
+                "value": "2.5",
+                "unit": "g/dL",
+                "reference_range": "2.0 - 3.5"
+              }
+            },
+            {
+              "row": 16,
+              "data": {
+                "test_name": "Albumin/Globulin Ratio",
+                "value": "2.3",
+                "unit": null,
+                "reference_range": "1.0 - 2.1"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_03": {
+          "expected_rows": 8,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 8,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 8,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 8,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 8,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "T3",
+                "value": "179",
+                "unit": "ng/dL",
+                "reference_range": null
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "T4",
+                "value": "10.9",
+                "unit": "\u00b5g/dL",
+                "reference_range": null
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "TSH (Ultrasensitive)",
+                "value": "2.49",
+                "unit": "\u00b5IU/mL",
+                "reference_range": "0.27 - 4.20"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Vit D Total",
+                "value": "58.9",
+                "unit": "ng/mL",
+                "reference_range": "30.0 - 100.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Vit B12",
+                "value": "359",
+                "unit": "pg/mL",
+                "reference_range": "197 - 771"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Glycated Hb",
+                "value": "6.0",
+                "unit": "%",
+                "reference_range": null
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "FBS",
+                "value": "88",
+                "unit": "mg/dL",
+                "reference_range": "70 - 100"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "PPBS",
+                "value": "95",
+                "unit": "mg/dL",
+                "reference_range": "70 - 140"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_05": {
+          "expected_rows": 14,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Haemoglobin",
+                "value": "11.9",
+                "unit": "g/dL",
+                "reference_range": "13.0 - 17.0"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Total RBC Count",
+                "value": "5.83",
+                "unit": "mill/cumm",
+                "reference_range": "4.50 - 5.50"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Packed Cell Volume (PCV)",
+                "value": "45.9",
+                "unit": "%",
+                "reference_range": "40.0 - 50.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "MCV",
+                "value": "94.9",
+                "unit": "fL",
+                "reference_range": "83.0 - 101.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "MCH",
+                "value": "28.3",
+                "unit": "pg",
+                "reference_range": "27.0 - 32.0"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "MCHC",
+                "value": "33.5",
+                "unit": "g/dL",
+                "reference_range": "31.5 - 34.5"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "RDW-CV",
+                "value": "13.6",
+                "unit": "%",
+                "reference_range": "11.6 - 14.0"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Total WBC Count",
+                "value": "2800",
+                "unit": "/cumm",
+                "reference_range": "4000 - 10000"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Neutrophils",
+                "value": "32",
+                "unit": "%",
+                "reference_range": "40 - 80"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Lymphocytes",
+                "value": "16",
+                "unit": "%",
+                "reference_range": "20 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Eosinophils",
+                "value": "5",
+                "unit": "%",
+                "reference_range": "1 - 6"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "Monocytes",
+                "value": "6",
+                "unit": "%",
+                "reference_range": "2 - 10"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Basophils",
+                "value": "2",
+                "unit": "%",
+                "reference_range": "0 - 2"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Platelet Count",
+                "value": "3.03",
+                "unit": "lakh/cumm",
+                "reference_range": "1.50 - 4.10"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_06": {
+          "expected_rows": 12,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Colour",
+                "value": "Dark Yellow",
+                "unit": null,
+                "reference_range": "Pale Yellow"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Clarity",
+                "value": "Clear",
+                "unit": null,
+                "reference_range": "Clear"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "pH",
+                "value": "6.5",
+                "unit": null,
+                "reference_range": "5.0 - 8.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Specific Gravity",
+                "value": "1.020",
+                "unit": null,
+                "reference_range": "1.005 - 1.030"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Albumin",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Sugar",
+                "value": "Present (+)",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "Ketones",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Leucocytes",
+                "value": "2-3",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Erythrocytes",
+                "value": "1-2",
+                "unit": "/hpf",
+                "reference_range": "Nil"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Squamous Epithelial Cells",
+                "value": "1-2",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "CRP",
+                "value": "< 0.5",
+                "unit": "mg/L",
+                "reference_range": "< 5.0"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "E.S.R. (Westergren)",
+                "value": "13",
+                "unit": "mm/hr",
+                "reference_range": "0 - 15"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 9,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_08": {
+          "expected_rows": 6,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 6,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 6,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 6,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 6,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "S. Cholesterol",
+                "value": "155",
+                "unit": "mg/dL",
+                "reference_range": "< 200"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "TG",
+                "value": "106",
+                "unit": "mg/dL",
+                "reference_range": "< 150"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "HDL-C",
+                "value": "60",
+                "unit": "mg/dL",
+                "reference_range": "> 40"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "LDL-C (Direct)",
+                "value": "73",
+                "unit": "mg/dL",
+                "reference_range": "< 100"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "VLDL",
+                "value": "23",
+                "unit": "mg/dL",
+                "reference_range": "< 30"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Chol/HDL",
+                "value": "4.3",
+                "unit": null,
+                "reference_range": "< 5.0"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_09": {
+          "expected_rows": 14,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 14,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Hemoglobin (Hb)",
+                "value": "17.4",
+                "unit": "g/dL",
+                "reference_range": "13.0 - 17.0"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "RBC Count",
+                "value": "4.85",
+                "unit": "mill/cumm",
+                "reference_range": "4.50 - 5.50"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Hematocrit",
+                "value": "47.7",
+                "unit": "%",
+                "reference_range": "40.0 - 50.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Mean Corpuscular Volume",
+                "value": "106.6",
+                "unit": "fL",
+                "reference_range": "83.0 - 101.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Mean Corpuscular Hb",
+                "value": "26.1",
+                "unit": "pg",
+                "reference_range": "27.0 - 32.0"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Mean Corp. Hb Conc.",
+                "value": "32.6",
+                "unit": "g/dL",
+                "reference_range": "31.5 - 34.5"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "RDW",
+                "value": "12.8",
+                "unit": "%",
+                "reference_range": "11.6 - 14.0"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Total Leucocyte Count",
+                "value": "4700",
+                "unit": "/cumm",
+                "reference_range": "4000 - 10000"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Neutrophils",
+                "value": "52",
+                "unit": "%",
+                "reference_range": "40 - 80"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Lymphocytes",
+                "value": "35",
+                "unit": "%",
+                "reference_range": "20 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Eosinophils",
+                "value": "5",
+                "unit": "%",
+                "reference_range": "1 - 6"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "Monocytes",
+                "value": "4",
+                "unit": "%",
+                "reference_range": "2 - 10"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Basophils",
+                "value": "2",
+                "unit": "%",
+                "reference_range": "0 - 2"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Platelets",
+                "value": "2,29,000",
+                "unit": "/cumm",
+                "reference_range": "1,50,000 - 4,10,000"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 0,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_11": {
+          "expected_rows": 54,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 54,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 54,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 54,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 54,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Hemoglobin (Hb)",
+                "value": "15.0",
+                "unit": "g/dL",
+                "reference_range": "13.0 - 17.0"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "RBC Count",
+                "value": "4.20",
+                "unit": "mill/cumm",
+                "reference_range": "4.50 - 5.50"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "Hematocrit",
+                "value": "46.3",
+                "unit": "%",
+                "reference_range": "40.0 - 50.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Mean Corpuscular Volume",
+                "value": "97.9",
+                "unit": "fL",
+                "reference_range": "83.0 - 101.0"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Mean Corpuscular Hb",
+                "value": "28.5",
+                "unit": "pg",
+                "reference_range": "27.0 - 32.0"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Mean Corp. Hb Conc.",
+                "value": "32.6",
+                "unit": "g/dL",
+                "reference_range": "31.5 - 34.5"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "RDW",
+                "value": "13.6",
+                "unit": "%",
+                "reference_range": "11.6 - 14.0"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Total Leucocyte Count",
+                "value": "8000",
+                "unit": "/cumm",
+                "reference_range": "4000 - 10000"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Neutrophils",
+                "value": "48",
+                "unit": "%",
+                "reference_range": "40 - 80"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Lymphocytes",
+                "value": "23",
+                "unit": "%",
+                "reference_range": "20 - 40"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "Eosinophils",
+                "value": "0",
+                "unit": "%",
+                "reference_range": "1 - 6"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "Monocytes",
+                "value": "5",
+                "unit": "%",
+                "reference_range": "2 - 10"
+              }
+            },
+            {
+              "row": 13,
+              "data": {
+                "test_name": "Basophils",
+                "value": "1",
+                "unit": "%",
+                "reference_range": "0 - 2"
+              }
+            },
+            {
+              "row": 14,
+              "data": {
+                "test_name": "Platelets",
+                "value": "2,03,000",
+                "unit": "/cumm",
+                "reference_range": "1,50,000 - 4,10,000"
+              }
+            },
+            {
+              "row": 15,
+              "data": {
+                "test_name": "Cholesterol - Total",
+                "value": "188",
+                "unit": "mg/dL",
+                "reference_range": "< 200"
+              }
+            },
+            {
+              "row": 16,
+              "data": {
+                "test_name": "Serum Triglycerides",
+                "value": "88",
+                "unit": "mg/dL",
+                "reference_range": "< 150"
+              }
+            },
+            {
+              "row": 17,
+              "data": {
+                "test_name": "Cholesterol - HDL",
+                "value": "60",
+                "unit": "mg/dL",
+                "reference_range": "> 40"
+              }
+            },
+            {
+              "row": 18,
+              "data": {
+                "test_name": "Cholesterol - LDL",
+                "value": "80",
+                "unit": "mg/dL",
+                "reference_range": "< 100"
+              }
+            },
+            {
+              "row": 19,
+              "data": {
+                "test_name": "Cholesterol - VLDL",
+                "value": "23",
+                "unit": "mg/dL",
+                "reference_range": "< 30"
+              }
+            },
+            {
+              "row": 20,
+              "data": {
+                "test_name": "TC/HDL Ratio",
+                "value": "3.3",
+                "unit": null,
+                "reference_range": "< 5.0"
+              }
+            },
+            {
+              "row": 21,
+              "data": {
+                "test_name": "Total Bilirubin",
+                "value": "1.31",
+                "unit": "mg/dL",
+                "reference_range": "0.30 - 1.20"
+              }
+            },
+            {
+              "row": 22,
+              "data": {
+                "test_name": "Direct Bilirubin",
+                "value": "0.07",
+                "unit": "mg/dL",
+                "reference_range": "0.00 - 0.30"
+              }
+            },
+            {
+              "row": 23,
+              "data": {
+                "test_name": "Indirect Bilirubin",
+                "value": "0.41",
+                "unit": "mg/dL",
+                "reference_range": "0.20 - 0.90"
+              }
+            },
+            {
+              "row": 24,
+              "data": {
+                "test_name": "Aspartate Aminotransferase",
+                "value": "2",
+                "unit": "U/L",
+                "reference_range": "5 - 40"
+              }
+            },
+            {
+              "row": 25,
+              "data": {
+                "test_name": "Alanine Aminotransferase",
+                "value": "2",
+                "unit": "U/L",
+                "reference_range": "5 - 45"
+              }
+            },
+            {
+              "row": 26,
+              "data": {
+                "test_name": "ALP",
+                "value": "74",
+                "unit": "U/L",
+                "reference_range": "40 - 129"
+              }
+            },
+            {
+              "row": 27,
+              "data": {
+                "test_name": "Protein Total",
+                "value": "7.2",
+                "unit": "g/dL",
+                "reference_range": "6.4 - 8.3"
+              }
+            },
+            {
+              "row": 28,
+              "data": {
+                "test_name": "Serum Albumin",
+                "value": "4.9",
+                "unit": "g/dL",
+                "reference_range": "3.5 - 5.2"
+              }
+            },
+            {
+              "row": 29,
+              "data": {
+                "test_name": "Serum Globulin",
+                "value": "3.7",
+                "unit": "g/dL",
+                "reference_range": "2.0 - 3.5"
+              }
+            },
+            {
+              "row": 30,
+              "data": {
+                "test_name": "Albumin/Globulin Ratio",
+                "value": "1.1",
+                "unit": null,
+                "reference_range": "1.0 - 2.1"
+              }
+            },
+            {
+              "row": 31,
+              "data": {
+                "test_name": "Urea",
+                "value": "42",
+                "unit": "mg/dL",
+                "reference_range": "15 - 40"
+              }
+            },
+            {
+              "row": 32,
+              "data": {
+                "test_name": "Creatinine",
+                "value": "1.00",
+                "unit": "mg/dL",
+                "reference_range": "0.70 - 1.30"
+              }
+            },
+            {
+              "row": 33,
+              "data": {
+                "test_name": "Serum Uric Acid",
+                "value": "6.5",
+                "unit": "mg/dL",
+                "reference_range": "3.5 - 7.2"
+              }
+            },
+            {
+              "row": 34,
+              "data": {
+                "test_name": "Sodium (Na+)",
+                "value": "142",
+                "unit": "mmol/L",
+                "reference_range": "136 - 146"
+              }
+            },
+            {
+              "row": 35,
+              "data": {
+                "test_name": "Potassium (K+)",
+                "value": "3.9",
+                "unit": "mmol/L",
+                "reference_range": "3.5 - 5.1"
+              }
+            },
+            {
+              "row": 36,
+              "data": {
+                "test_name": "Chloride (Cl-)",
+                "value": "100",
+                "unit": "mmol/L",
+                "reference_range": "98 - 107"
+              }
+            },
+            {
+              "row": 37,
+              "data": {
+                "test_name": "Triiodothyronine (T3)",
+                "value": "186",
+                "unit": "ng/dL",
+                "reference_range": "80 - 200"
+              }
+            },
+            {
+              "row": 38,
+              "data": {
+                "test_name": "Thyroxine (T4)",
+                "value": "13.2",
+                "unit": "\u00b5g/dL",
+                "reference_range": "5.1 - 14.1"
+              }
+            },
+            {
+              "row": 39,
+              "data": {
+                "test_name": "Thyroid Stimulating Hormone",
+                "value": "1.45",
+                "unit": "\u00b5IU/mL",
+                "reference_range": "0.27 - 4.20"
+              }
+            },
+            {
+              "row": 40,
+              "data": {
+                "test_name": "Glycosylated Haemoglobin (HbA1c)",
+                "value": "3.6",
+                "unit": "%",
+                "reference_range": "< 5.7"
+              }
+            },
+            {
+              "row": 41,
+              "data": {
+                "test_name": "Glucose - Fasting",
+                "value": "94",
+                "unit": "mg/dL",
+                "reference_range": "70 - 100"
+              }
+            },
+            {
+              "row": 42,
+              "data": {
+                "test_name": "Glucose - PP",
+                "value": "80",
+                "unit": "mg/dL",
+                "reference_range": "70 - 140"
+              }
+            },
+            {
+              "row": 43,
+              "data": {
+                "test_name": "25-Hydroxy Vitamin D",
+                "value": "118.8",
+                "unit": "ng/mL",
+                "reference_range": "30.0 - 100.0"
+              }
+            },
+            {
+              "row": 44,
+              "data": {
+                "test_name": "Cyanocobalamin (B12)",
+                "value": "498",
+                "unit": "pg/mL",
+                "reference_range": "197 - 771"
+              }
+            },
+            {
+              "row": 45,
+              "data": {
+                "test_name": "Color",
+                "value": "Pale Yellow",
+                "unit": null,
+                "reference_range": "Pale Yellow"
+              }
+            },
+            {
+              "row": 46,
+              "data": {
+                "test_name": "Appearance",
+                "value": "Clear",
+                "unit": null,
+                "reference_range": "Clear"
+              }
+            },
+            {
+              "row": 47,
+              "data": {
+                "test_name": "Reaction (pH)",
+                "value": "6.0",
+                "unit": null,
+                "reference_range": "5.0 - 8.0"
+              }
+            },
+            {
+              "row": 48,
+              "data": {
+                "test_name": "Sp. Gravity",
+                "value": "1.015",
+                "unit": null,
+                "reference_range": "1.005 - 1.030"
+              }
+            },
+            {
+              "row": 49,
+              "data": {
+                "test_name": "Urine Protein",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 50,
+              "data": {
+                "test_name": "Urine Glucose",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 51,
+              "data": {
+                "test_name": "Ketone Bodies",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 52,
+              "data": {
+                "test_name": "Pus Cells (WBC)",
+                "value": "8-10",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 53,
+              "data": {
+                "test_name": "RBC",
+                "value": "Nil",
+                "unit": "/hpf",
+                "reference_range": "Nil"
+              }
+            },
+            {
+              "row": 54,
+              "data": {
+                "test_name": "Epithelial Cells",
+                "value": "3-4",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 8,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        }
+      },
+      "aggregate": {
+        "expected_rows": 138,
+        "predicted_rows": 0,
+        "matched_rows": 0,
+        "correct_rows": 0,
+        "qualifier_expected": 17,
+        "qualifier_correct": 0,
+        "invented_missing_ranges": 0,
+        "exact_name_matches": 0,
+        "coverage": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "complete_row": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "macro_complete_row_f1": 0.0,
+        "field_accuracy": {
+          "test_name": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 138,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "value": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 138,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "unit": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 138,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "reference_range": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 138,
+            "among_matched": null,
+            "over_expected": 0.0
+          }
+        },
+        "missing_rows": 138,
+        "unsupported_rows": 0
+      },
+      "observed_subset_aggregate": null
+    }
+  },
+  "policy_version": "1.0",
+  "adjudications": [
+    {
+      "report": "report_01",
+      "row": 14,
+      "test_name": "Platelet Count",
+      "field": "value",
+      "original": "304000",
+      "corrected": "340000",
+      "source": "reports/report_01.pdf, page 1, final CBC row: Platelet Count",
+      "reason": "PDF text and visual inspection both show 340000. Supplied gold/report_01.json lines 81\u201385 say 304000. Apply only in a copied adjudicated view; never modify gold."
+    }
+  ],
+  "unlabelled_reports": {
+    "reports": [
+      "report_04",
+      "report_07",
+      "report_10",
+      "report_12"
+    ],
+    "status": "Not scored in Checkpoint 1. Candidate-authored review references and live outputs remain future work."
+  },
+  "cost_and_extraction_latency": null,
+  "fingerprints": {
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\evaluate.py": "3e57c6c5e3003880c78559b00395337db6b7286eb71aef5f2c3844cf832ab08a",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\evaluation_cases.json": "dd54002acc03632095085185d09b3e1f9f98ad67e35d61112580a7b34989f790",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\schema.json": "e5396dd59385b9f04e123ae1de5915bf5ada5c54b87b2b646e7a3aacb93558fd",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_01.json": "567656e32dd0de79cecc78583b8087db9a7f8e979cfd75ae8e41b86575d8a8e4",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_02.json": "38a528678520593e96b7438900c7e542c56e0bee2eb3227a864b8ffb1c93bc3b",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_03.json": "3258d95fd72f80fc6e1dccad53447ffb20fd3b760a9baaf3c940ab9a74446c21",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_05.json": "b513eeeb88b09212a61adff3ff9aad95f76386ebe1c272effac631256eb04d1b",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_06.json": "a9086274da1fd989d26db98f44c1a5e777e8d71de770c9ae8d6012b20f3f3dfc",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_08.json": "0f007bfac2c76016d51f6cae184d68f982a96b1c94172f55f2e316210bdf4a3a",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_09.json": "04d7a66594947c7ade08c0f333e794e9da9fb81f9038df93e401aaf80abace30",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_11.json": "48ec31ae54615cbf624d6e70c2f44ed8222ad2dc263b0c6d416a832e13136304"
+  },
+  "prediction_fingerprints": {},
+  "manifest_sha256": "cb3a8a11b270d602d2f9bc858fb3579f4bb977d44f245d0e8e9a147a9d2a3779"
+}

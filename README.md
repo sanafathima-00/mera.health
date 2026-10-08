@@ -43,7 +43,7 @@ For setup errors: a missing `pdftoppm` means Poppler is not on `PATH`; HTTP 401/
 
 ## Checkpoint 1: offline evaluation
 
-No baseline has been measured. Score real saved `report_<id>.json` predictions without credentials:
+No successful accuracy baseline has been measured. Score real saved `report_<id>.json` predictions without credentials:
 
 ```powershell
 python evaluate.py score --predictions evidence/baseline
@@ -53,3 +53,9 @@ python -m unittest discover -p 'test_*.py' -v
 Missing outputs are **unavailable**, not measured failures or zero-score baselines. See [EVALUATION.md](EVALUATION.md) for frozen matching, normalization, failure accounting, metrics and manifest format. Original and adjudicated scores are both reported. [evaluation_cases.json](evaluation_cases.json) documents report 01's platelet correction (`304000` label versus `340000` source); supplied labels stay unchanged.
 
 Decision log: kept direct source values and conservative aliases; rejected fuzzy name matching and unit-scale conversion. Verified the platelet discrepancy by PDF text and visual inspection. Preserved the 255-word plan before implementation in commit `df3de423ac889a084b0cd7fd02a04f5d1c95dc29`. The evaluator and synthetic tests do not execute the extractor or make model calls. Unlabelled-report review, provider measurement, and extraction improvements remain future work.
+
+## Checkpoint 2: generation requests failed
+
+After the user replaced the invalid key and confirmed free-tier eligibility, model metadata succeeded. All eight unchanged-extractor requests returned HTTP 503; no predictions or token usage were returned. [BASELINE.md](BASELINE.md), [run.json](evidence/baseline/run.json), and raw stdout/stderr record configuration and per-attempt latency (158.320 seconds total, 19.790 mean). [metrics.json](evidence/baseline/metrics.json) records eight failures: operational recall/F1 zero, precision undefined. These failures do not measure extraction accuracy. Original/adjudicated labels and evaluation policy are unchanged. 38 offline tests pass.
+
+Decision log: kept the supplied model and requests unchanged; did not retry, silently substitute a model, or fabricate empty predictions. Only free-tier calls were authorized. Successful-report latency, token-based cost and 10000-report/day cost remain unavailable. .env is ignored; .env.example is a placeholder only. Do not assume production volume fits free-tier quota.

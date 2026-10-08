@@ -1,0 +1,77 @@
+{
+  "model": "gemini-3.8-flash",
+  "temperature": 0,
+  "maxOutputTokens": 16000,
+  "timeout_seconds": 180,
+  "pdf_dpi": 60,
+  "pdf_pages": "first only",
+  "billing_confirmation": "user confirmed free tier",
+  "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+  "instrumentation": "runpy executes unchanged CLI; json.load observer captures usage without altering request or response",
+  "reports": {
+    "report_01": {
+      "status": "failed",
+      "exit_code": 1,
+      "wall_seconds": 15.973811400002887,
+      "usage_metadata": [],
+      "command": "python extract.py reports/report_01.pdf",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_02": {
+      "status": "failed",
+      "exit_code": 1,
+      "wall_seconds": 4.05048479999823,
+      "usage_metadata": [],
+      "command": "python extract.py reports/report_02.pdf",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_03": {
+      "status": "failed",
+      "exit_code": 1,
+      "wall_seconds": 48.12394259999928,
+      "usage_metadata": [],
+      "command": "python extract.py reports/report_03.pdf",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_05": {
+      "status": "failed",
+      "exit_code": 1,
+      "wall_seconds": 11.076824100000522,
+      "usage_metadata": [],
+      "command": "python extract.py reports/report_05.pdf",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_06": {
+      "status": "failed",
+      "exit_code": 1,
+      "wall_seconds": 29.80858040000021,
+      "usage_metadata": [],
+      "command": "python extract.py reports/report_06.pdf",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_08": {
+      "status": "failed",
+      "exit_code": 1,
+      "wall_seconds": 4.662818099997821,
+      "usage_metadata": [],
+      "command": "python extract.py reports/report_08.jpg",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_09": {
+      "status": "failed",
+      "exit_code": 1,
+      "wall_seconds": 5.532274599998345,
+      "usage_metadata": [],
+      "command": "python extract.py reports/report_09.jpg",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_11": {
+      "status": "failed",
+      "exit_code": 1,
+      "wall_seconds": 39.0917343000001,
+      "usage_metadata": [],
+      "command": "python extract.py reports/report_11.pdf",
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    }
+  }
+}
