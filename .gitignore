@@ -1,0 +1,33 @@
+# Credentials and local secrets (examples may be committed).
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# Python environments, caches and coverage.
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local editors and temporary outputs.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+tmp/
+temp/
+outputs/
+*.tmp
+*.log
+
+# Deliberately keep reviewed evaluation evidence eligible for version control.
