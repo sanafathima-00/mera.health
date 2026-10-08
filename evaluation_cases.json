@@ -1,0 +1,34 @@
+{
+  "policy_version": "1.0",
+  "aliases": [
+    {"names": ["Haemoglobin", "Hemoglobin", "Hemoglobin (Hb)", "Hb"], "reason": "Spelling and unambiguous abbreviation of the blood hemoglobin row."},
+    {"names": ["Total RBC Count", "RBC Count"], "reason": "Blood cell count names; intentionally excludes bare RBC (urinalysis)."},
+    {"names": ["Packed Cell Volume (PCV)", "Hematocrit", "Haematocrit", "PCV"], "reason": "Printed blood packed-cell-volume terminology."},
+    {"names": ["MCV", "Mean Corpuscular Volume"], "reason": "Unambiguous expansion of MCV."},
+    {"names": ["MCH", "Mean Corpuscular Hb", "Mean Corpuscular Hemoglobin"], "reason": "Unambiguous expansion of MCH; does not include MCHC."},
+    {"names": ["MCHC", "Mean Corp. Hb Conc.", "Mean Corpuscular Hemoglobin Concentration"], "reason": "Unambiguous expansion of MCHC."},
+    {"names": ["Total WBC Count", "Total Leucocyte Count", "Total Leukocyte Count"], "reason": "Total blood count; excludes urine leucocytes."},
+    {"names": ["Platelet Count", "Platelets"], "reason": "Printed platelet count terminology."},
+    {"names": ["TG", "Serum Triglycerides", "Triglycerides"], "reason": "Lipid-panel triglyceride terminology."},
+    {"names": ["FBS", "Glucose - Fasting", "Fasting Blood Sugar", "Fasting Glucose"], "reason": "Fasting result only; excludes random and postprandial results."},
+    {"names": ["PPBS", "Glucose - PP", "Postprandial Blood Sugar", "Postprandial Glucose"], "reason": "Postprandial result only; excludes fasting results."},
+    {"names": ["T3", "Triiodothyronine (T3)"], "reason": "Printed T3 terminology; excludes explicitly free T3."},
+    {"names": ["T4", "Thyroxine (T4)"], "reason": "Printed T4 terminology; excludes explicitly free T4."},
+    {"names": ["CRP", "C-Reactive Protein"], "reason": "Unambiguous abbreviation; excludes explicitly high-sensitivity CRP."}
+  ],
+  "unit_aliases": {"g/dl": "g/dL", "mg/dl": "mg/dL"},
+  "adjudications": [
+    {
+      "report": "report_01",
+      "row": 14,
+      "test_name": "Platelet Count",
+      "field": "value",
+      "original": "304000",
+      "corrected": "340000",
+      "source": "reports/report_01.pdf, page 1, final CBC row: Platelet Count",
+      "reason": "PDF text and visual inspection both show 340000. Supplied gold/report_01.json lines 81–85 say 304000. Apply only in a copied adjudicated view; never modify gold."
+    }
+  ],
+  "unlabelled_reports": ["report_04", "report_07", "report_10", "report_12"],
+  "unlabelled_status": "Not scored in Checkpoint 1. Candidate-authored review references and live outputs remain future work."
+}
