@@ -1,0 +1,557 @@
+{
+  "status": "partial",
+  "measurement": "Saved predictions only; evaluator does not run extraction",
+  "message": "Scoring requires baseline outputs; missing predictions are not measured failures",
+  "report_status_counts": {
+    "valid": 0,
+    "invalid": 0,
+    "failed": 1,
+    "unavailable": 7
+  },
+  "reports": [
+    {
+      "report": "report_01",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_02",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_03",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_05",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_06",
+      "status": "failed",
+      "error": "transport"
+    },
+    {
+      "report": "report_08",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_09",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    },
+    {
+      "report": "report_11",
+      "status": "unavailable",
+      "error": "Saved prediction absent; baseline outputs are required"
+    }
+  ],
+  "views": {
+    "original": {
+      "reports": {
+        "report_01": null,
+        "report_02": null,
+        "report_03": null,
+        "report_05": null,
+        "report_06": {
+          "expected_rows": 12,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Colour",
+                "value": "Dark Yellow",
+                "unit": null,
+                "reference_range": "Pale Yellow"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Clarity",
+                "value": "Clear",
+                "unit": null,
+                "reference_range": "Clear"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "pH",
+                "value": "6.5",
+                "unit": null,
+                "reference_range": "5.0 - 8.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Specific Gravity",
+                "value": "1.020",
+                "unit": null,
+                "reference_range": "1.005 - 1.030"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Albumin",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Sugar",
+                "value": "Present (+)",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "Ketones",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Leucocytes",
+                "value": "2-3",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Erythrocytes",
+                "value": "1-2",
+                "unit": "/hpf",
+                "reference_range": "Nil"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Squamous Epithelial Cells",
+                "value": "1-2",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "CRP",
+                "value": "< 0.5",
+                "unit": "mg/L",
+                "reference_range": "< 5.0"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "E.S.R. (Westergren)",
+                "value": "13",
+                "unit": "mm/hr",
+                "reference_range": "0 - 15"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 9,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_08": null,
+        "report_09": null,
+        "report_11": null
+      },
+      "aggregate": null,
+      "observed_subset_aggregate": {
+        "expected_rows": 12,
+        "predicted_rows": 0,
+        "matched_rows": 0,
+        "correct_rows": 0,
+        "qualifier_expected": 9,
+        "qualifier_correct": 0,
+        "invented_missing_ranges": 0,
+        "exact_name_matches": 0,
+        "coverage": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "complete_row": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "macro_complete_row_f1": 0.0,
+        "field_accuracy": {
+          "test_name": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 12,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "value": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 12,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "unit": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 12,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "reference_range": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 12,
+            "among_matched": null,
+            "over_expected": 0.0
+          }
+        },
+        "missing_rows": 12,
+        "unsupported_rows": 0
+      }
+    },
+    "adjudicated": {
+      "reports": {
+        "report_01": null,
+        "report_02": null,
+        "report_03": null,
+        "report_05": null,
+        "report_06": {
+          "expected_rows": 12,
+          "predicted_rows": 0,
+          "matched_rows": 0,
+          "correct_rows": 0,
+          "coverage": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "complete_row": {
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "field_accuracy": {
+            "test_name": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "value": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "unit": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            },
+            "reference_range": {
+              "correct": 0,
+              "matched_denominator": 0,
+              "expected_denominator": 12,
+              "among_matched": null,
+              "over_expected": 0.0
+            }
+          },
+          "missing_gold_rows": [
+            {
+              "row": 1,
+              "data": {
+                "test_name": "Colour",
+                "value": "Dark Yellow",
+                "unit": null,
+                "reference_range": "Pale Yellow"
+              }
+            },
+            {
+              "row": 2,
+              "data": {
+                "test_name": "Clarity",
+                "value": "Clear",
+                "unit": null,
+                "reference_range": "Clear"
+              }
+            },
+            {
+              "row": 3,
+              "data": {
+                "test_name": "pH",
+                "value": "6.5",
+                "unit": null,
+                "reference_range": "5.0 - 8.0"
+              }
+            },
+            {
+              "row": 4,
+              "data": {
+                "test_name": "Specific Gravity",
+                "value": "1.020",
+                "unit": null,
+                "reference_range": "1.005 - 1.030"
+              }
+            },
+            {
+              "row": 5,
+              "data": {
+                "test_name": "Albumin",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 6,
+              "data": {
+                "test_name": "Sugar",
+                "value": "Present (+)",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 7,
+              "data": {
+                "test_name": "Ketones",
+                "value": "Negative",
+                "unit": null,
+                "reference_range": "Negative"
+              }
+            },
+            {
+              "row": 8,
+              "data": {
+                "test_name": "Leucocytes",
+                "value": "2-3",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 9,
+              "data": {
+                "test_name": "Erythrocytes",
+                "value": "1-2",
+                "unit": "/hpf",
+                "reference_range": "Nil"
+              }
+            },
+            {
+              "row": 10,
+              "data": {
+                "test_name": "Squamous Epithelial Cells",
+                "value": "1-2",
+                "unit": "/hpf",
+                "reference_range": "0 - 5"
+              }
+            },
+            {
+              "row": 11,
+              "data": {
+                "test_name": "CRP",
+                "value": "< 0.5",
+                "unit": "mg/L",
+                "reference_range": "< 5.0"
+              }
+            },
+            {
+              "row": 12,
+              "data": {
+                "test_name": "E.S.R. (Westergren)",
+                "value": "13",
+                "unit": "mm/hr",
+                "reference_range": "0 - 15"
+              }
+            }
+          ],
+          "unmatched_predictions": [],
+          "field_mismatches": [],
+          "matches": [],
+          "exact_name_matches": 0,
+          "duplicate_prediction_names": [],
+          "order_violation": false,
+          "qualifier_expected": 9,
+          "qualifier_correct": 0,
+          "invented_missing_ranges": 0,
+          "no_result_pass": false
+        },
+        "report_08": null,
+        "report_09": null,
+        "report_11": null
+      },
+      "aggregate": null,
+      "observed_subset_aggregate": {
+        "expected_rows": 12,
+        "predicted_rows": 0,
+        "matched_rows": 0,
+        "correct_rows": 0,
+        "qualifier_expected": 9,
+        "qualifier_correct": 0,
+        "invented_missing_ranges": 0,
+        "exact_name_matches": 0,
+        "coverage": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "complete_row": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "macro_complete_row_f1": 0.0,
+        "field_accuracy": {
+          "test_name": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 12,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "value": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 12,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "unit": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 12,
+            "among_matched": null,
+            "over_expected": 0.0
+          },
+          "reference_range": {
+            "correct": 0,
+            "matched_denominator": 0,
+            "expected_denominator": 12,
+            "among_matched": null,
+            "over_expected": 0.0
+          }
+        },
+        "missing_rows": 12,
+        "unsupported_rows": 0
+      }
+    }
+  },
+  "policy_version": "1.0",
+  "adjudications": [
+    {
+      "report": "report_01",
+      "row": 14,
+      "test_name": "Platelet Count",
+      "field": "value",
+      "original": "304000",
+      "corrected": "340000",
+      "source": "reports/report_01.pdf, page 1, final CBC row: Platelet Count",
+      "reason": "PDF text and visual inspection both show 340000. Supplied gold/report_01.json lines 81\u201385 say 304000. Apply only in a copied adjudicated view; never modify gold."
+    }
+  ],
+  "unlabelled_reports": {
+    "reports": [
+      "report_04",
+      "report_07",
+      "report_10",
+      "report_12"
+    ],
+    "status": "Not scored in Checkpoint 1. Candidate-authored review references and live outputs remain future work."
+  },
+  "cost_and_extraction_latency": null,
+  "fingerprints": {
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\evaluate.py": "3e57c6c5e3003880c78559b00395337db6b7286eb71aef5f2c3844cf832ab08a",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\evaluation_cases.json": "dd54002acc03632095085185d09b3e1f9f98ad67e35d61112580a7b34989f790",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\schema.json": "e5396dd59385b9f04e123ae1de5915bf5ada5c54b87b2b646e7a3aacb93558fd",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_01.json": "567656e32dd0de79cecc78583b8087db9a7f8e979cfd75ae8e41b86575d8a8e4",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_02.json": "38a528678520593e96b7438900c7e542c56e0bee2eb3227a864b8ffb1c93bc3b",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_03.json": "3258d95fd72f80fc6e1dccad53447ffb20fd3b760a9baaf3c940ab9a74446c21",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_05.json": "b513eeeb88b09212a61adff3ff9aad95f76386ebe1c272effac631256eb04d1b",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_06.json": "a9086274da1fd989d26db98f44c1a5e777e8d71de770c9ae8d6012b20f3f3dfc",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_08.json": "0f007bfac2c76016d51f6cae184d68f982a96b1c94172f55f2e316210bdf4a3a",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_09.json": "04d7a66594947c7ade08c0f333e794e9da9fb81f9038df93e401aaf80abace30",
+    "D:\\Programming\\mera.health take-home\\ai-engineer-take-home\\gold\\report_11.json": "48ec31ae54615cbf624d6e70c2f44ed8222ad2dc263b0c6d416a832e13136304"
+  },
+  "prediction_fingerprints": {
+    "report_06.attempt.json": "8e01ccdf1b17b27062f58685028315d3dadebdfad14b46356b44435f6d91d0b2"
+  },
+  "manifest_sha256": "0decd94d9354e93585bdd00aa35c63b9d6c450a077f5ee0be6b7dfb1eca5ed41"
+}

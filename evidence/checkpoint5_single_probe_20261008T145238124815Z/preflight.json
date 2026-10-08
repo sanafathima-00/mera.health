@@ -1,0 +1,10 @@
+{
+  "scope": "one improved report_06 generation probe only",
+  "maximum_generation_calls": 1,
+  "matched_project_free_tier_displayed": true,
+  "masked_suffix_match": true,
+  "billing_link_status": "unverified",
+  "remaining_quota": "unverified",
+  "authorization": "User explicitly accepted displayed Free-tier status for this single probe",
+  "harness_commit": "7496210b445225f75fe48e102ae2d61a6a28980f"
+}

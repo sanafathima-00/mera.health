@@ -1,0 +1,10 @@
+{
+  "reports": {
+    "report_06": {
+      "status": "failed",
+      "error": "transport"
+    }
+  },
+  "generation_calls": 1,
+  "stop_reason": "single_attempt_complete"
+}
