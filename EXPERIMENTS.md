@@ -155,6 +155,14 @@ not run_matrix, using improved revision 9933806, model gemini-3.6-flash, Report 
 is evidence/checkpoint5_single_probe_20261008T145238124815Z. The earlier two
 zero-call preflight directories remain unchanged. No retry or model switch followed.
 
+Historical quota nuance: the preserved 14:31 preflight records a Last Hour
+dashboard observation of 0/5 RPM, 0/250000 TPM and 0/20 RPD, with a stated
+15-minute update delay. That record explicitly says the quota was not verified
+for the exact local credential. Later dashboard reads returned no usage data.
+These earlier displayed limits are historical observations, not proof of remaining
+quota at the later probe time; they must not be silently discarded or promoted
+to verified credential-specific headroom.
+
 Measured total attempt latency: 181.10009170000194 seconds. Images were rendered
 successfully and request configuration was captured. The observer classified a
 transport exception before entering the HTTP response context. It assigns HTTP
