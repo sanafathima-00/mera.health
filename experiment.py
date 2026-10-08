@@ -10,6 +10,7 @@ import time
 import types
 import urllib.error
 import urllib.request
+from decimal import Decimal
 from pathlib import Path
 from unittest.mock import patch
 
@@ -57,8 +58,14 @@ def local_key(path):
     return key
 
 
+def diagnostic_json(value):
+    if isinstance(value, Decimal) and value.is_finite():
+        return str(value)
+    raise TypeError("Unsupported or non-finite diagnostic value")
+
+
 def write_json(path, data, key=""):
-    text = json.dumps(data, indent=2, ensure_ascii=True, allow_nan=False)
+    text = json.dumps(data, indent=2, ensure_ascii=True, allow_nan=False, default=diagnostic_json)
     if key:
         text = text.replace(key, "[REDACTED_SECRET]")
     path.write_text(text + "\n", encoding="utf-8")

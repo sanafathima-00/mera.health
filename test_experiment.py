@@ -54,6 +54,22 @@ class HarnessTests(unittest.TestCase):
         self.assertTrue(hasattr(original, "load_image"))
         self.assertTrue(hasattr(improved, "load_images"))
 
+    def test_saved_baseline_decimal_diagnostics_serialize_without_score_change(self):
+        from decimal import Decimal
+        metrics = e.evaluate.evaluate(e.ROOT / "evidence/baseline_36", e.ROOT / "gold", e.ROOT / "evaluation_cases.json")
+        actual = metrics["views"]["original"]["reports"]["report_01"]["field_mismatches"][0]["actual"]
+        self.assertIsInstance(actual, Decimal)
+        output = self.root / "metrics.json"
+        e.write_json(output, metrics)
+        saved = json.loads((e.ROOT / "evidence/baseline_36/metrics.json").read_text())
+        serialized = json.loads(output.read_text())
+        self.assertEqual(serialized["views"], saved["views"])
+        self.assertEqual(serialized["report_status_counts"], saved["report_status_counts"])
+        e.write_json(output, {"precise": Decimal("0.123456789012345678901234567890")})
+        self.assertEqual(json.loads(output.read_text())["precise"], "0.123456789012345678901234567890")
+        with self.assertRaises(TypeError):
+            e.write_json(output, {"invalid": Decimal("NaN")})
+
     def test_matrix_order_settings_evidence_and_budget(self):
         requests = []
         def transport(request, timeout):
