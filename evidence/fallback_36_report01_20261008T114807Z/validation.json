@@ -1,0 +1,7 @@
+{
+  "valid": true,
+  "method": "frozen evaluator validator implements supplied schema shape and types; not general JSON Schema engine",
+  "schema_sha256": "e5396dd59385b9f04e123ae1de5915bf5ada5c54b87b2b646e7a3aacb93558fd",
+  "prediction_sha256": "d952977431e639f422f48fa59837c14108eebff97797f5ed476335d856c1e643",
+  "predicted_rows": 14
+}

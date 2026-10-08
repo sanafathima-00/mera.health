@@ -1,0 +1,211 @@
+{
+  "model": "gemini-3.6-flash",
+  "temperature": 0,
+  "maxOutputTokens": 16000,
+  "timeout_seconds": 180,
+  "pdf_dpi": 60,
+  "pdf_pages": "first only",
+  "free_tier_only": true,
+  "reports": {
+    "report_01": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 11.391932800001086,
+      "usage_metadata": [
+        {
+          "promptTokenCount": 1242,
+          "candidatesTokenCount": 886,
+          "totalTokenCount": 3629,
+          "promptTokensDetails": [
+            {
+              "modality": "IMAGE",
+              "tokenCount": 1092
+            },
+            {
+              "modality": "TEXT",
+              "tokenCount": 150
+            }
+          ],
+          "thoughtsTokenCount": 1501,
+          "serviceTier": "standard"
+        }
+      ],
+      "provenance_directory": "evidence/fallback_36_report01_20261008T114807Z",
+      "reused_without_new_call": true
+    },
+    "report_02": {
+      "model": "gemini-3.6-flash",
+      "command": "python extract.py reports/report_02.pdf",
+      "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+      "generation_calls": 1,
+      "wall_seconds": 10.861773199998424,
+      "exit_code": 1,
+      "status": "failed",
+      "failure_kind": "http_failure",
+      "provider_response": {
+        "http_status": 503,
+        "headers": {
+          "Date": "Thu, 08 Oct 2026 12:21:23 GMT",
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "provider_status": "UNAVAILABLE",
+        "reason_codes": [],
+        "message_category": "high_demand_or_overload"
+      },
+      "usage_metadata": [],
+      "response_summary": [],
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_03": {
+      "model": "gemini-3.6-flash",
+      "command": "python extract.py reports/report_03.pdf",
+      "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+      "generation_calls": 1,
+      "wall_seconds": 41.82986190000156,
+      "exit_code": 1,
+      "status": "failed",
+      "failure_kind": "http_failure",
+      "provider_response": {
+        "http_status": 503,
+        "headers": {
+          "Date": "Thu, 08 Oct 2026 12:22:05 GMT",
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "provider_status": "UNAVAILABLE",
+        "reason_codes": [],
+        "message_category": "high_demand_or_overload"
+      },
+      "usage_metadata": [],
+      "response_summary": [],
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_05": {
+      "model": "gemini-3.6-flash",
+      "command": "python extract.py reports/report_05.pdf",
+      "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+      "generation_calls": null,
+      "wall_seconds": 181.06744160000017,
+      "exit_code": 1,
+      "status": "failed",
+      "failure_kind": "extraction_or_transport_error",
+      "provider_response": {},
+      "usage_metadata": [],
+      "response_summary": [],
+      "error": "TimeoutError: extraction/runner exception; details withheld"
+    },
+    "report_06": {
+      "model": "gemini-3.6-flash",
+      "command": "python extract.py reports/report_06.pdf",
+      "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+      "generation_calls": 1,
+      "wall_seconds": 42.92735179999727,
+      "exit_code": 1,
+      "status": "failed",
+      "failure_kind": "http_failure",
+      "provider_response": {
+        "http_status": 503,
+        "headers": {
+          "Date": "Thu, 08 Oct 2026 12:25:49 GMT",
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "provider_status": "UNAVAILABLE",
+        "reason_codes": [],
+        "message_category": "high_demand_or_overload"
+      },
+      "usage_metadata": [],
+      "response_summary": [],
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_08": {
+      "model": "gemini-3.6-flash",
+      "command": "python extract.py reports/report_08.jpg",
+      "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+      "generation_calls": 1,
+      "wall_seconds": 7.020654300002207,
+      "exit_code": 0,
+      "status": "success",
+      "failure_kind": null,
+      "provider_response": {
+        "http_status": 200,
+        "headers": {
+          "Date": "Thu, 08 Oct 2026 12:25:56 GMT",
+          "Content-Type": "application/json; charset=UTF-8"
+        }
+      },
+      "usage_metadata": [
+        {
+          "promptTokenCount": 1242,
+          "candidatesTokenCount": 372,
+          "totalTokenCount": 2634,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 150
+            },
+            {
+              "modality": "IMAGE",
+              "tokenCount": 1092
+            }
+          ],
+          "thoughtsTokenCount": 1020,
+          "serviceTier": "standard"
+        }
+      ],
+      "response_summary": [
+        {
+          "modelVersion": "gemini-3.6-flash",
+          "finishReasons": [
+            "STOP"
+          ],
+          "candidate_count": 1
+        }
+      ]
+    },
+    "report_09": {
+      "model": "gemini-3.6-flash",
+      "command": "python extract.py reports/report_09.jpg",
+      "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+      "generation_calls": 1,
+      "wall_seconds": 9.774437600000965,
+      "exit_code": 1,
+      "status": "failed",
+      "failure_kind": "http_failure",
+      "provider_response": {
+        "http_status": 503,
+        "headers": {
+          "Date": "Thu, 08 Oct 2026 12:26:06 GMT",
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "provider_status": "UNAVAILABLE",
+        "reason_codes": [],
+        "message_category": "high_demand_or_overload"
+      },
+      "usage_metadata": [],
+      "response_summary": [],
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    },
+    "report_11": {
+      "model": "gemini-3.6-flash",
+      "command": "python extract.py reports/report_11.pdf",
+      "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+      "generation_calls": 1,
+      "wall_seconds": 93.98938719999933,
+      "exit_code": 1,
+      "status": "failed",
+      "failure_kind": "http_failure",
+      "provider_response": {
+        "http_status": 503,
+        "headers": {
+          "Date": "Thu, 08 Oct 2026 12:27:40 GMT",
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "provider_status": "UNAVAILABLE",
+        "reason_codes": [],
+        "message_category": "high_demand_or_overload"
+      },
+      "usage_metadata": [],
+      "response_summary": [],
+      "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+    }
+  }
+}

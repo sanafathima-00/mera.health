@@ -1,0 +1,45 @@
+{
+  "model": "gemini-3.6-flash",
+  "command": "python extract.py reports/report_08.jpg",
+  "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+  "generation_calls": 1,
+  "wall_seconds": 7.020654300002207,
+  "exit_code": 0,
+  "status": "success",
+  "failure_kind": null,
+  "provider_response": {
+    "http_status": 200,
+    "headers": {
+      "Date": "Thu, 08 Oct 2026 12:25:56 GMT",
+      "Content-Type": "application/json; charset=UTF-8"
+    }
+  },
+  "usage_metadata": [
+    {
+      "promptTokenCount": 1242,
+      "candidatesTokenCount": 372,
+      "totalTokenCount": 2634,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 150
+        },
+        {
+          "modality": "IMAGE",
+          "tokenCount": 1092
+        }
+      ],
+      "thoughtsTokenCount": 1020,
+      "serviceTier": "standard"
+    }
+  ],
+  "response_summary": [
+    {
+      "modelVersion": "gemini-3.6-flash",
+      "finishReasons": [
+        "STOP"
+      ],
+      "candidate_count": 1
+    }
+  ]
+}

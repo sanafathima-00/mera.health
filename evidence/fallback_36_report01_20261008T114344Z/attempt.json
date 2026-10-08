@@ -1,0 +1,13 @@
+{
+  "model": "gemini-3.6-flash",
+  "report": "report_01.pdf",
+  "status": "blocked_before_generation",
+  "generation_calls": 0,
+  "error_category": "local_credential_unavailable",
+  "diagnostic": "The project-local .env value was empty or the placeholder; guard stopped before HTTP requests. Credential value not logged.",
+  "latency": null,
+  "usage_metadata": null,
+  "predictions": null,
+  "schema_validation": "not run; no prediction",
+  "evaluation": "not run; no prediction"
+}

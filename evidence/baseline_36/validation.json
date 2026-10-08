@@ -1,0 +1,38 @@
+{
+  "method": "frozen supplied-schema shape validator",
+  "schema_sha256": "e5396dd59385b9f04e123ae1de5915bf5ada5c54b87b2b646e7a3aacb93558fd",
+  "reports": {
+    "report_01": {
+      "valid": true,
+      "predicted_rows": 14
+    },
+    "report_02": {
+      "valid": null,
+      "status": "no prediction; request failed"
+    },
+    "report_03": {
+      "valid": null,
+      "status": "no prediction; request failed"
+    },
+    "report_05": {
+      "valid": null,
+      "status": "no prediction; request failed"
+    },
+    "report_06": {
+      "valid": null,
+      "status": "no prediction; request failed"
+    },
+    "report_08": {
+      "valid": true,
+      "predicted_rows": 6
+    },
+    "report_09": {
+      "valid": null,
+      "status": "no prediction; request failed"
+    },
+    "report_11": {
+      "valid": null,
+      "status": "no prediction; request failed"
+    }
+  }
+}

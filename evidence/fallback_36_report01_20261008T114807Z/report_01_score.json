@@ -1,0 +1,250 @@
+{
+  "report": "report_01",
+  "evaluation_exit_code": 2,
+  "scope": "one report only; remaining seven outputs unavailable in this fallback run",
+  "schema_validation": {
+    "valid": true,
+    "method": "frozen evaluator validator implements supplied schema shape and types; not general JSON Schema engine",
+    "schema_sha256": "e5396dd59385b9f04e123ae1de5915bf5ada5c54b87b2b646e7a3aacb93558fd",
+    "prediction_sha256": "d952977431e639f422f48fa59837c14108eebff97797f5ed476335d856c1e643",
+    "predicted_rows": 14
+  },
+  "views": {
+    "original": {
+      "expected_rows": 14,
+      "predicted_rows": 14,
+      "matched_rows": 14,
+      "correct_rows": 13,
+      "coverage": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "complete_row": {
+        "precision": 0.9285714285714286,
+        "recall": 0.9285714285714286,
+        "f1": 0.9285714285714286
+      },
+      "field_accuracy": {
+        "test_name": {
+          "correct": 14,
+          "matched_denominator": 14,
+          "expected_denominator": 14,
+          "among_matched": 1.0,
+          "over_expected": 1.0
+        },
+        "value": {
+          "correct": 13,
+          "matched_denominator": 14,
+          "expected_denominator": 14,
+          "among_matched": 0.9285714285714286,
+          "over_expected": 0.9285714285714286
+        },
+        "unit": {
+          "correct": 14,
+          "matched_denominator": 14,
+          "expected_denominator": 14,
+          "among_matched": 1.0,
+          "over_expected": 1.0
+        },
+        "reference_range": {
+          "correct": 14,
+          "matched_denominator": 14,
+          "expected_denominator": 14,
+          "among_matched": 1.0,
+          "over_expected": 1.0
+        }
+      },
+      "missing_gold_rows": [],
+      "unmatched_predictions": [],
+      "field_mismatches": [
+        {
+          "gold_row": 14,
+          "prediction_row": 14,
+          "field": "value",
+          "expected": "304000",
+          "actual": "340000.0"
+        }
+      ],
+      "matches": [
+        {
+          "gold_row": 1,
+          "prediction_row": 1
+        },
+        {
+          "gold_row": 2,
+          "prediction_row": 2
+        },
+        {
+          "gold_row": 3,
+          "prediction_row": 3
+        },
+        {
+          "gold_row": 4,
+          "prediction_row": 4
+        },
+        {
+          "gold_row": 5,
+          "prediction_row": 5
+        },
+        {
+          "gold_row": 6,
+          "prediction_row": 6
+        },
+        {
+          "gold_row": 7,
+          "prediction_row": 7
+        },
+        {
+          "gold_row": 8,
+          "prediction_row": 8
+        },
+        {
+          "gold_row": 9,
+          "prediction_row": 9
+        },
+        {
+          "gold_row": 10,
+          "prediction_row": 10
+        },
+        {
+          "gold_row": 11,
+          "prediction_row": 11
+        },
+        {
+          "gold_row": 12,
+          "prediction_row": 12
+        },
+        {
+          "gold_row": 13,
+          "prediction_row": 13
+        },
+        {
+          "gold_row": 14,
+          "prediction_row": 14
+        }
+      ],
+      "exact_name_matches": 14,
+      "duplicate_prediction_names": [],
+      "order_violation": false,
+      "qualifier_expected": 0,
+      "qualifier_correct": 0,
+      "invented_missing_ranges": 0,
+      "no_result_pass": false
+    },
+    "adjudicated": {
+      "expected_rows": 14,
+      "predicted_rows": 14,
+      "matched_rows": 14,
+      "correct_rows": 14,
+      "coverage": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "complete_row": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "field_accuracy": {
+        "test_name": {
+          "correct": 14,
+          "matched_denominator": 14,
+          "expected_denominator": 14,
+          "among_matched": 1.0,
+          "over_expected": 1.0
+        },
+        "value": {
+          "correct": 14,
+          "matched_denominator": 14,
+          "expected_denominator": 14,
+          "among_matched": 1.0,
+          "over_expected": 1.0
+        },
+        "unit": {
+          "correct": 14,
+          "matched_denominator": 14,
+          "expected_denominator": 14,
+          "among_matched": 1.0,
+          "over_expected": 1.0
+        },
+        "reference_range": {
+          "correct": 14,
+          "matched_denominator": 14,
+          "expected_denominator": 14,
+          "among_matched": 1.0,
+          "over_expected": 1.0
+        }
+      },
+      "missing_gold_rows": [],
+      "unmatched_predictions": [],
+      "field_mismatches": [],
+      "matches": [
+        {
+          "gold_row": 1,
+          "prediction_row": 1
+        },
+        {
+          "gold_row": 2,
+          "prediction_row": 2
+        },
+        {
+          "gold_row": 3,
+          "prediction_row": 3
+        },
+        {
+          "gold_row": 4,
+          "prediction_row": 4
+        },
+        {
+          "gold_row": 5,
+          "prediction_row": 5
+        },
+        {
+          "gold_row": 6,
+          "prediction_row": 6
+        },
+        {
+          "gold_row": 7,
+          "prediction_row": 7
+        },
+        {
+          "gold_row": 8,
+          "prediction_row": 8
+        },
+        {
+          "gold_row": 9,
+          "prediction_row": 9
+        },
+        {
+          "gold_row": 10,
+          "prediction_row": 10
+        },
+        {
+          "gold_row": 11,
+          "prediction_row": 11
+        },
+        {
+          "gold_row": 12,
+          "prediction_row": 12
+        },
+        {
+          "gold_row": 13,
+          "prediction_row": 13
+        },
+        {
+          "gold_row": 14,
+          "prediction_row": 14
+        }
+      ],
+      "exact_name_matches": 14,
+      "duplicate_prediction_names": [],
+      "order_violation": false,
+      "qualifier_expected": 0,
+      "qualifier_correct": 0,
+      "invented_missing_ranges": 0,
+      "no_result_pass": false
+    }
+  }
+}

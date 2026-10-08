@@ -1,0 +1,27 @@
+{
+  "model": "gemini-3.6-flash",
+  "reports_accounted_for": 8,
+  "new_calls_this_batch": 7,
+  "report01_reused": true,
+  "total_baseline_attempt_seconds": 398.862840400001,
+  "new_batch_attempt_seconds": 387.4709075999999,
+  "mean_attempt_seconds": 49.857855050000126,
+  "successful_report_mean_seconds": 9.206293550001647,
+  "observed_usage_totals": {
+    "promptTokenCount": 2484,
+    "candidatesTokenCount": 1258,
+    "thoughtsTokenCount": 2521,
+    "totalTokenCount": 6263
+  },
+  "reports_with_usage": 2,
+  "failed_report_usage": "unavailable, not zero",
+  "full_corpus_token_total": null,
+  "actual_invoice_spend": null,
+  "paid_list_price_equivalent_observed_successes_usd": 0.01603425,
+  "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing",
+  "prices_checked_on": "2026-10-08",
+  "cost_per_successful_observed_report_usd_list_price": 0.008017125,
+  "full_corpus_cost_per_report": null,
+  "projection_10000_reports_daily": null,
+  "cost_note": "Free-tier project user confirmed and UI Free tier observed; no billing enabled. List-price equivalents are not actual charges. Failed usage unavailable; two successful reports cannot establish corpus cost or production quota."
+}

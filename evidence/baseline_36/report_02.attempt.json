@@ -1,0 +1,23 @@
+{
+  "model": "gemini-3.6-flash",
+  "command": "python extract.py reports/report_02.pdf",
+  "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+  "generation_calls": 1,
+  "wall_seconds": 10.861773199998424,
+  "exit_code": 1,
+  "status": "failed",
+  "failure_kind": "http_failure",
+  "provider_response": {
+    "http_status": 503,
+    "headers": {
+      "Date": "Thu, 08 Oct 2026 12:21:23 GMT",
+      "Content-Type": "application/json; charset=UTF-8"
+    },
+    "provider_status": "UNAVAILABLE",
+    "reason_codes": [],
+    "message_category": "high_demand_or_overload"
+  },
+  "usage_metadata": [],
+  "response_summary": [],
+  "error": "Gemini HTTP 503; check API access, model and quota. See README.md."
+}

@@ -1,0 +1,51 @@
+{
+  "model": "gemini-3.8-flash",
+  "report": "report_01.pdf",
+  "free_tier_only": true,
+  "max_additional_generation_calls": 2,
+  "temperature": 0,
+  "maxOutputTokens": 16000,
+  "timeout_seconds": 180,
+  "pdf_dpi": 60,
+  "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+  "attempts": [
+    {
+      "attempt": 1,
+      "backoff_seconds": 12.41655622691803,
+      "wall_seconds": 2.9428170999999566,
+      "exit_code": 1,
+      "status": "failed",
+      "http_error": {
+        "http_status": 503,
+        "retry_headers": {
+          "Date": "Thu, 08 Oct 2026 11:35:34 GMT",
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "provider_status": "UNAVAILABLE",
+        "reason_codes": [],
+        "message_category": "high_demand_or_overload",
+        "raw_message_saved": false
+      },
+      "usage_metadata": []
+    },
+    {
+      "attempt": 2,
+      "backoff_seconds": 24.307389897784752,
+      "wall_seconds": 2.869803300000058,
+      "exit_code": 1,
+      "status": "failed",
+      "http_error": {
+        "http_status": 503,
+        "retry_headers": {
+          "Date": "Thu, 08 Oct 2026 11:36:01 GMT",
+          "Content-Type": "application/json; charset=UTF-8"
+        },
+        "provider_status": "UNAVAILABLE",
+        "reason_codes": [],
+        "message_category": "high_demand_or_overload",
+        "raw_message_saved": false
+      },
+      "usage_metadata": []
+    }
+  ]
+}

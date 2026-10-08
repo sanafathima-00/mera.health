@@ -1,0 +1,19 @@
+{
+  "attempt": 1,
+  "backoff_seconds": 12.41655622691803,
+  "wall_seconds": 2.9428170999999566,
+  "exit_code": 1,
+  "status": "failed",
+  "http_error": {
+    "http_status": 503,
+    "retry_headers": {
+      "Date": "Thu, 08 Oct 2026 11:35:34 GMT",
+      "Content-Type": "application/json; charset=UTF-8"
+    },
+    "provider_status": "UNAVAILABLE",
+    "reason_codes": [],
+    "message_category": "high_demand_or_overload",
+    "raw_message_saved": false
+  },
+  "usage_metadata": []
+}

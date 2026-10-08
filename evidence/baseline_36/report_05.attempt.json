@@ -1,0 +1,14 @@
+{
+  "model": "gemini-3.6-flash",
+  "command": "python extract.py reports/report_05.pdf",
+  "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+  "generation_calls": null,
+  "wall_seconds": 181.06744160000017,
+  "exit_code": 1,
+  "status": "failed",
+  "failure_kind": "extraction_or_transport_error",
+  "provider_response": {},
+  "usage_metadata": [],
+  "response_summary": [],
+  "error": "TimeoutError: extraction/runner exception; details withheld"
+}

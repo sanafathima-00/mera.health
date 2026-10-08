@@ -1,0 +1,52 @@
+{
+  "model": "gemini-3.6-flash",
+  "report": "report_01.pdf",
+  "generation_calls": 1,
+  "free_tier_only": true,
+  "billing_changes": false,
+  "temperature": 0,
+  "maxOutputTokens": 16000,
+  "timeout_seconds": 180,
+  "pdf_dpi": 60,
+  "pdf_pages": "first only",
+  "source_sha256": "3e616543943a2fa0b211bee7934bee1c108f26ac9609dcbe15255a188928c421",
+  "wall_seconds": 11.391932800001086,
+  "exit_code": 0,
+  "status": "success",
+  "provider_response": {
+    "http_status": 200,
+    "response_headers": {
+      "Date": "Thu, 08 Oct 2026 11:48:17 GMT",
+      "Content-Type": "application/json; charset=UTF-8"
+    }
+  },
+  "usage_metadata": [
+    {
+      "promptTokenCount": 1242,
+      "candidatesTokenCount": 886,
+      "totalTokenCount": 3629,
+      "promptTokensDetails": [
+        {
+          "modality": "IMAGE",
+          "tokenCount": 1092
+        },
+        {
+          "modality": "TEXT",
+          "tokenCount": 150
+        }
+      ],
+      "thoughtsTokenCount": 1501,
+      "serviceTier": "standard"
+    }
+  ],
+  "response_summary": [
+    {
+      "modelVersion": "gemini-3.6-flash",
+      "finishReasons": [
+        "STOP"
+      ],
+      "candidate_count": 1
+    }
+  ],
+  "instrumentation": "unchanged CLI via runpy; urllib and json observers preserve outgoing request and successful response object"
+}
