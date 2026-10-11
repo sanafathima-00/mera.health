@@ -1,0 +1,2 @@
+# Documentation PDFs are binary; preserve their bytes and avoid text whitespace checks.
+*.pdf binary

@@ -72,7 +72,7 @@ def main():
                          "env_untracked": not git("ls-files", ".env").strip()}
     result["unexplained_deletions"] = git("diff", "--name-only", "--diff-filter=D", START).decode().splitlines()
     result["scope"] = "Offline finalization; no generation, publication or submission"
-    (Path(__file__).parent / "verification.json").write_text(json.dumps(result, indent=2) + "\n")
+    (Path(__file__).parent / "verification.json").write_bytes((json.dumps(result, indent=2) + "\n").encode())
     print(json.dumps(result, indent=2))
     valid = (tests.returncode == 0 and all(result["protected"].values()) and
              all(v["views_unchanged"] and v["counts_unchanged"] for v in result["evaluation"].values()) and

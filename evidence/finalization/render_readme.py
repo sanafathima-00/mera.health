@@ -15,4 +15,4 @@ if __name__ == "__main__":
     renderer.main()
     record = json.loads((HERE / "readme_render.json").read_text())
     record["renderer"] = "evidence/finalization/render_readme.py (historical layout reused)"
-    (HERE / "readme_render.json").write_text(json.dumps(record, indent=2) + "\n")
+    (HERE / "readme_render.json").write_bytes((json.dumps(record, indent=2) + "\n").encode())
