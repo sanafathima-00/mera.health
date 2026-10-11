@@ -70,3 +70,24 @@ extraction-quality treatment remain missing; optional transcripts are absent.
 - Optional UI commit: `b12bba06d77d5b321dc6d471288820cf04175e2c`.
 - Intended destination supplied by user: `https://github.com/sanafathima-00/mera.health`.
   Remote history and backlog publication approval must be checked before pushing.
+
+## Publication verification
+
+User confirmed the public destination and explicitly approved publishing the
+eleven historical commits in the first push. GitHub metadata showed an empty
+repository before publication. Configured `origin` to the supplied URL; no history
+was rewritten and no force push was used.
+
+| Sequential push | Remote master SHA verified with `git ls-remote` |
+|---|---|
+| Existing history plus optional UI | `b12bba06d77d5b321dc6d471288820cf04175e2c` |
+| Final documentation and verification | `edf2181afd4c342e0ac6edcebec158cb59e20800` |
+| Binary attributes and record line endings | `f95c7704ffc3defb625890a288a178ad8f685270` |
+
+The formatting follow-up corrects an earlier staged whitespace check: generated
+PDF whitespace is intrinsic binary structure; new JSON records use LF. The
+README content/render and historical evidence bytes did not change in that fix.
+The complete suite passed again (94 tests). `master` tracks `origin/master`;
+ahead/behind counts were 0/0 and the working tree was clean after the third push.
+This publication log is committed and pushed separately after those checks.
+No company submission, email or model generation occurred.
