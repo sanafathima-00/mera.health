@@ -39,7 +39,7 @@ The historical original renderer has no conversion timeout; no timeout is added
 by the runner, to preserve its behavior. Provider default thinking settings are
 not overridden; resolved response model version is recorded when exposed.
 
-## Commands and evidence
+## Historical Checkpoint 5 preparation commands and evidence
 
 Safe preparation and tests (no model calls):
 
@@ -54,7 +54,7 @@ Future execution, only after explicit generation approval and verified prerequis
 python -B experiment.py --generate --preflight <reviewed-preflight.json> --output evidence/checkpoint5/<new-run-id>
 ```
 
-No reviewed preflight file exists yet. It must record model, authentication_verified,
+At this preparation stage no reviewed matrix preflight file existed. It must record model, authentication_verified,
 project_association_verified, free_tier_verified, quota_available_verified and
 generation_approved as true; verified_at_unix within one hour; credential_sha256
 matching the current local key; project_id, association_evidence and quota_evidence.
@@ -118,7 +118,7 @@ remaining quota; usage must also be verified. Google's
 directs users to their active project limits in AI Studio. Generic model metadata
 and advertised free-tier pricing cannot establish this project's usable quota.
 
-**Remaining blockers:** exact key-to-project verification and project-specific
+**Blockers at this historical preparation stage:** exact key-to-project verification and project-specific
 Gemini 3.6 Flash free-tier eligibility/available quota. Generation stays blocked.
 
 ## Offline verification
@@ -130,7 +130,7 @@ frozen scoring, provider categories, first-pair and DPI gates, consecutive 503
 stop, stale environment override, safe default CLI, blocked generation and
 existing-directory protection. All network responses are synthetic.
 
-Executed `python -B -m unittest discover -p 'test_*.py' -q`: 86 passed,
+At this historical preparation stage, executed `python -B -m unittest discover -p 'test_*.py' -q`: 86 passed,
 zero failed (12 harness tests plus 74 existing tests). Safe plan command reports
 zero generation calls. Protected tracked files and historical evidence have no
 diff. `.env` remains ignored/untracked. An existing untracked preflight evidence
@@ -201,3 +201,13 @@ The four unlabelled inputs are assessed by source inspection in UNLABELLED_REVIE
 not included in accuracy metrics. README.md is the concise final synthesis;
 evidence/submission/README.pdf records its locally rendered layout. Agent transcripts
 are optional and absent. External submission, push and email were not performed.
+
+## Repository finalization, 11 October 2026
+
+The optional local UI was added after assessment finalization at the user's
+request. Its seven mocked HTTP tests bring the suite to 94 tests. A private
+three-page user report was manually compared with its displayed 24 rows; that
+report/output is not included in this repository, is not a controlled assessment
+pair and does not establish improved assessment accuracy. Historical evidence and
+the frozen evaluation are unchanged. No generation is performed by finalization.
+Current verification and publication status: [FINALIZATION.md](FINALIZATION.md).

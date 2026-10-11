@@ -16,6 +16,8 @@ python evaluate.py score --predictions evidence/baseline_36
 python -B -m unittest discover -p 'test_*.py' -q
 ```
 
+Run commands from the repository root. Evaluator exit 1 means recorded failures/invalid outputs, 2 unavailable predictions, 3 evaluation error; baseline exit 1 is expected. No pip install is needed. Optional post-assessment upload UI: [UI.md](UI.md).
+
 When generation is authorized, load `.env` for one CLI invocation without printing the key:
 
 ```powershell
@@ -65,4 +67,4 @@ Original 3.6 attempt time: 398.863 seconds, mean 49.858; successful mean 9.206. 
 
 Offline visual assessment: 04 clean printed PDF; 07 scanned PDF with handwriting; 10 shadowed phone photo; 12 prescription/advised tests. All inputs are supported; no predictions, new labels or accuracy claims. Details: [UNLABELLED_REVIEW.md](UNLABELLED_REVIEW.md).
 
-Decision log: preserve initial 255-word PLAN (df3de42); freeze evaluator (c2e319f); select 3.6 only after approved fallback; reject post-hoc aliases/fabricated scores; separate cleanup and page commits; pause generation after bounded failure. **87 offline tests pass**, including real-baseline Decimal serialization. Mandatory measured before/after improvement and an unsuccessful extraction-quality experiment remain unmet; failed recovery is reported separately. History and safe evidence are included; optional transcripts are absent. No submission, push or email occurred.
+Decision log: preserve initial 255-word PLAN (df3de42); freeze evaluator (c2e319f); select 3.6 only after approved fallback; reject post-hoc aliases/fabricated scores; separate cleanup and page commits; pause generation after bounded failure. **94 offline tests pass**, including Decimal serialization and seven mocked UI tests. Mandatory measured before/after improvement and an unsuccessful extraction-quality experiment remain unmet. History and safe evidence are included; optional transcripts are absent. See [FINALIZATION.md](FINALIZATION.md) for packaging and publication status.

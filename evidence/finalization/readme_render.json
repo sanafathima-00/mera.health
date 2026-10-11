@@ -1,0 +1,14 @@
+{
+  "readme_sha256": "99bc4f554368bef391ef32353f059f346505f9ec2d854b15788f832147036601",
+  "pages": 2,
+  "page_size": "A4",
+  "body_font": "Helvetica 10pt / 12pt leading",
+  "margins_points": {
+    "left": 36,
+    "right": 36,
+    "top": 32,
+    "bottom": 34
+  },
+  "renderer": "evidence/finalization/render_readme.py (historical layout reused)",
+  "scope": "Full README content; no forced page breaks or omitted sections"
+}

@@ -1,0 +1,46 @@
+{
+  "tests": {
+    "exit_code": 0,
+    "output": "----------------------------------------------------------------------\nRan 94 tests in 12.539s\n\nOK"
+  },
+  "protected": {
+    "starter_assets": true,
+    "frozen_evaluator": true,
+    "extractor": true,
+    "historical_evidence": true,
+    "prompt_document": true
+  },
+  "evaluation": {
+    "baseline": {
+      "exit_code": 1,
+      "views_unchanged": true,
+      "counts_unchanged": true
+    },
+    "baseline_36": {
+      "exit_code": 1,
+      "views_unchanged": true,
+      "counts_unchanged": true
+    },
+    "checkpoint5_single_probe_20261008T145238124815Z": {
+      "exit_code": 2,
+      "views_unchanged": true,
+      "counts_unchanged": true
+    }
+  },
+  "experiment": {
+    "exit_code": 0,
+    "generation_calls": 0
+  },
+  "readme": {
+    "pages": 2,
+    "hash_matches": true
+  },
+  "secrets": {
+    "candidate_matching_files": [],
+    "historical_matching_blobs": 0,
+    "env_ignored": true,
+    "env_untracked": true
+  },
+  "unexplained_deletions": [],
+  "scope": "Offline finalization; no generation, publication or submission"
+}
